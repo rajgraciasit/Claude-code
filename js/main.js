@@ -225,14 +225,29 @@
   // ---- Hub Flow SVG Line-Draw Animation ----
   var hubFlow = document.querySelector('.hub-flow');
   if (hubFlow && 'IntersectionObserver' in window) {
+    var hubPaths = hubFlow.querySelectorAll('.hub-svg path');
+    hubPaths.forEach(function (path, index) {
+      var len = path.getTotalLength();
+      path.style.strokeDasharray = len;
+      path.style.strokeDashoffset = len;
+    });
+
     var hubObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           hubFlow.classList.add('revealed');
+          hubPaths.forEach(function (path, index) {
+            var isBottom = path.closest('.hub-svg-bottom');
+            var delay = isBottom ? (800 + index * 80) : (index * 80);
+            setTimeout(function () {
+              path.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+              path.style.strokeDashoffset = '0';
+            }, delay);
+          });
           hubObserver.unobserve(hubFlow);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
     hubObserver.observe(hubFlow);
   }
 

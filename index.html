@@ -31,10 +31,9 @@
 
   <title>11SI | Pure-Play Cybersecurity Managed Services</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts — Satoshi (same as ACPL) -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -132,16 +131,6 @@
   <section class="hero" id="hero" aria-label="Hero section">
     <div class="hero-bg">
       <canvas id="globeCanvas" aria-hidden="true"></canvas>
-      <div class="hero-vendors-orbit" aria-hidden="true">
-        <span class="hero-vendor" style="--i: 0">Microsoft</span>
-        <span class="hero-vendor" style="--i: 1">CrowdStrike</span>
-        <span class="hero-vendor" style="--i: 2">Fortinet</span>
-        <span class="hero-vendor" style="--i: 3">Sophos</span>
-        <span class="hero-vendor" style="--i: 4">Palo Alto</span>
-        <span class="hero-vendor" style="--i: 5">Okta</span>
-        <span class="hero-vendor" style="--i: 6">Rapid7</span>
-        <span class="hero-vendor" style="--i: 7">Cloudflare</span>
-      </div>
     </div>
     <div class="hero-content">
       <p class="hero-label">PURE-PLAY CYBERSECURITY MANAGED SERVICES</p>
@@ -156,6 +145,32 @@
     </div>
     <div class="hero-scroll-indicator" aria-hidden="true">
       <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ VENDOR MARQUEE BAR ============ -->
+  <section class="vendor-marquee" aria-label="Technology Partners">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span class="marquee-item">Microsoft</span>
+        <span class="marquee-item">CrowdStrike</span>
+        <span class="marquee-item">Fortinet</span>
+        <span class="marquee-item">Sophos</span>
+        <span class="marquee-item">Palo Alto</span>
+        <span class="marquee-item">Okta</span>
+        <span class="marquee-item">Rapid7</span>
+        <span class="marquee-item">Cloudflare</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item">Microsoft</span>
+        <span class="marquee-item">CrowdStrike</span>
+        <span class="marquee-item">Fortinet</span>
+        <span class="marquee-item">Sophos</span>
+        <span class="marquee-item">Palo Alto</span>
+        <span class="marquee-item">Okta</span>
+        <span class="marquee-item">Rapid7</span>
+        <span class="marquee-item">Cloudflare</span>
+      </div>
     </div>
   </section>
 
@@ -438,6 +453,9 @@
             </div>
             <div class="threatmap-frame">
               <iframe src="https://livethreatmap.radware.com/" title="Live Threat Map by Radware" loading="lazy" referrerpolicy="no-referrer"></iframe>
+              <div class="threatmap-overlay-top" aria-hidden="true"></div>
+              <div class="threatmap-overlay-bottom" aria-hidden="true"></div>
+              <div class="threatmap-overlay-topright" aria-hidden="true"></div>
             </div>
             <div class="threatmap-actions">
               <a href="mailto:prashant@11si.com" class="threatmap-btn threatmap-btn-alert">

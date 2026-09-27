@@ -128,11 +128,20 @@
     </div>
   </nav>
 
-  <!-- ============ HERO SECTION ============ -->
+  <!-- ============ HERO SECTION (WHITE BG + GLOBE + VENDOR ORBIT) ============ -->
   <section class="hero" id="hero" aria-label="Hero section">
     <div class="hero-bg">
       <canvas id="globeCanvas" aria-hidden="true"></canvas>
-      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <div class="hero-vendors-orbit" aria-hidden="true">
+        <span class="hero-vendor" style="--i: 0">Microsoft</span>
+        <span class="hero-vendor" style="--i: 1">CrowdStrike</span>
+        <span class="hero-vendor" style="--i: 2">Fortinet</span>
+        <span class="hero-vendor" style="--i: 3">Sophos</span>
+        <span class="hero-vendor" style="--i: 4">Palo Alto</span>
+        <span class="hero-vendor" style="--i: 5">Okta</span>
+        <span class="hero-vendor" style="--i: 6">Rapid7</span>
+        <span class="hero-vendor" style="--i: 7">Cloudflare</span>
+      </div>
     </div>
     <div class="hero-content">
       <p class="hero-label">PURE-PLAY CYBERSECURITY MANAGED SERVICES</p>
@@ -142,15 +151,7 @@
       </h1>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
-        <a href="#lifecycle" class="btn btn-outline">Explore Lifecycle</a>
-      </div>
-      <div class="hero-topics">
-        <a href="#services" class="topic-pill">Zero Trust</a>
-        <a href="#services" class="topic-pill">MDR & SOC</a>
-        <a href="#services" class="topic-pill">Endpoint</a>
-        <a href="#services" class="topic-pill">Cloud</a>
-        <a href="#services" class="topic-pill">Identity</a>
-        <a href="#services" class="topic-pill">Network</a>
+        <a href="#lifecycle" class="btn btn-outline-dark">Explore Lifecycle</a>
       </div>
     </div>
     <div class="hero-scroll-indicator" aria-hidden="true">
@@ -158,136 +159,97 @@
     </div>
   </section>
 
-  <!-- ============ VENDOR LOGO SCROLL ============ -->
-  <section class="vendors" aria-label="Technology vendors">
-    <div class="vendor-marquee">
-      <div class="vendor-track">
-        <div class="vendor-item"><span class="vendor-logo vl-microsoft">Microsoft</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-crowdstrike">CrowdStrike</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-fortinet">Fortinet</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-sophos">Sophos</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-paloalto">Palo Alto</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-okta">Okta</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-rapid7">Rapid7</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-cloudflare">Cloudflare</span></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="vendor-item"><span class="vendor-logo vl-microsoft">Microsoft</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-crowdstrike">CrowdStrike</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-fortinet">Fortinet</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-sophos">Sophos</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-paloalto">Palo Alto</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-okta">Okta</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-rapid7">Rapid7</span></div>
-        <div class="vendor-item"><span class="vendor-logo vl-cloudflare">Cloudflare</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CYBER DELIVERY LIFECYCLE ============ -->
+  <!-- ============ CYBER DELIVERY LIFECYCLE (STICKY SCROLL) ============ -->
   <section class="lifecycle" id="lifecycle" aria-label="Cyber Delivery Lifecycle">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">DELIVERY ARCHITECTURE</span>
-        <h2 class="section-title">The 11SI Cyber Delivery Lifecycle</h2>
-        <p class="section-subtitle">A structured model moving organisations from exposure to operational security maturity &mdash; delivered with precision at every stage.</p>
-      </div>
-
-      <div class="lifecycle-phases">
-        <!-- Phase 1: Assess -->
-        <div class="phase reveal-on-scroll">
-          <div class="phase-content">
-            <div class="phase-number">01</div>
-            <h2 class="phase-title">Assess</h2>
-            <p class="phase-description">Architectural design, vulnerability assessment, and real-world POCs. We identify gaps and design secure, scalable frameworks before a single tool is deployed.</p>
+    <div class="lifecycle-scroll">
+      <div class="lifecycle-sticky">
+        <div class="container">
+          <div class="lifecycle-header">
+            <span class="section-label">DELIVERY ARCHITECTURE</span>
+            <h2 class="section-title">The 11SI Cyber Delivery Lifecycle</h2>
+            <p class="section-subtitle">A structured model moving organisations from exposure to operational security maturity &mdash; delivered with precision at every stage.</p>
           </div>
-          <div class="phase-visual">
-            <div class="phase-icon phase-icon-assess" aria-hidden="true">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-dasharray="8 4" opacity="0.4"/>
-                <circle cx="100" cy="100" r="55" fill="none" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
-                <circle cx="100" cy="100" r="30" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="2"/>
-                <circle cx="100" cy="100" r="8" fill="var(--color-accent)"/>
-                <line x1="100" y1="20" x2="100" y2="42" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
-                <line x1="100" y1="158" x2="100" y2="180" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
-                <line x1="20" y1="100" x2="42" y2="100" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
-                <line x1="158" y1="100" x2="180" y2="100" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
-                <circle cx="100" cy="20" r="4" fill="var(--color-primary)"/>
-                <circle cx="180" cy="100" r="4" fill="var(--color-primary)"/>
-                <circle cx="100" cy="180" r="4" fill="var(--color-primary)"/>
-                <circle cx="20" cy="100" r="4" fill="var(--color-primary)"/>
-              </svg>
+          <div class="lifecycle-stage">
+            <div class="lifecycle-timeline">
+              <div class="timeline-line"><div class="timeline-progress" id="timelineProgress"></div></div>
+              <div class="timeline-dot active" data-phase="0">01</div>
+              <div class="timeline-dot" data-phase="1">02</div>
+              <div class="timeline-dot" data-phase="2">03</div>
+              <div class="timeline-dot" data-phase="3">04</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Phase 2: Implement -->
-        <div class="phase phase-reverse reveal-on-scroll">
-          <div class="phase-content">
-            <div class="phase-number">02</div>
-            <h2 class="phase-title">Implement</h2>
-            <p class="phase-description">We implement certified solutions from Tier-1 vendors &mdash; Zero Trust, SIEM, EDR, SASE, and more &mdash; engineered precisely to your environment.</p>
-          </div>
-          <div class="phase-visual">
-            <div class="phase-icon phase-icon-implement" aria-hidden="true">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="40" y="50" width="120" height="100" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
-                <rect x="55" y="65" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
-                <rect x="105" y="65" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
-                <rect x="55" y="105" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
-                <rect x="105" y="105" width="40" height="30" rx="4" fill="var(--color-accent)" stroke="var(--color-accent)" stroke-width="1.5" opacity="0.3"/>
-                <polyline points="65,80 72,87 85,72" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="115,80 122,87 135,72" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <polyline points="65,120 72,127 85,112" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="115" y1="120" x2="135" y2="120" stroke="var(--color-primary)" stroke-width="2" opacity="0.4"/>
-                <circle cx="160" cy="50" r="15" fill="var(--color-accent)" opacity="0.15"/>
-                <text x="160" y="55" text-anchor="middle" fill="var(--color-accent)" font-size="14" font-weight="700">&#x2713;</text>
-              </svg>
+            <div class="lifecycle-panels">
+              <div class="lifecycle-panel active" data-phase="0">
+                <h3 class="phase-name">Assess</h3>
+                <p class="phase-desc">Architectural design, vulnerability assessment, and real-world POCs. We identify gaps and design secure, scalable frameworks before a single tool is deployed.</p>
+              </div>
+              <div class="lifecycle-panel" data-phase="1">
+                <h3 class="phase-name">Implement</h3>
+                <p class="phase-desc">We implement certified solutions from Tier-1 vendors &mdash; Zero Trust, SIEM, EDR, SASE, and more &mdash; engineered precisely to your environment.</p>
+              </div>
+              <div class="lifecycle-panel" data-phase="2">
+                <h3 class="phase-name">Manage</h3>
+                <p class="phase-desc">24&times;7 managed services with continuous monitoring, configuration management, optimization, and compliance reporting across all layers of your stack.</p>
+              </div>
+              <div class="lifecycle-panel" data-phase="3">
+                <h3 class="phase-name">Defend</h3>
+                <p class="phase-desc">MDR with advanced analytics, threat intelligence, and expert SOC analysts. Rapid containment and proactive defence against evolving cyber attacks.</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Phase 3: Manage -->
-        <div class="phase reveal-on-scroll">
-          <div class="phase-content">
-            <div class="phase-number">03</div>
-            <h2 class="phase-title">Manage</h2>
-            <p class="phase-description">24&times;7 managed services with continuous monitoring, configuration management, optimization, and compliance reporting across all layers of your stack.</p>
-          </div>
-          <div class="phase-visual">
-            <div class="phase-icon phase-icon-manage" aria-hidden="true">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="40" width="140" height="90" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
-                <line x1="30" y1="60" x2="170" y2="60" stroke="var(--color-primary)" stroke-width="1" opacity="0.3"/>
-                <circle cx="45" cy="50" r="4" fill="#e74c3c" opacity="0.7"/>
-                <circle cx="58" cy="50" r="4" fill="#f39c12" opacity="0.7"/>
-                <circle cx="71" cy="50" r="4" fill="#2ecc71" opacity="0.7"/>
-                <polyline points="45,110 65,90 85,100 105,75 125,85 145,70 155,78" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="155" cy="78" r="4" fill="var(--color-accent)"/>
-                <rect x="45" y="150" width="25" height="20" rx="3" fill="var(--color-accent)" opacity="0.2"/>
-                <rect x="80" y="145" width="25" height="25" rx="3" fill="var(--color-accent)" opacity="0.3"/>
-                <rect x="115" y="140" width="25" height="30" rx="3" fill="var(--color-accent)" opacity="0.5"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phase 4: Defend -->
-        <div class="phase phase-reverse reveal-on-scroll">
-          <div class="phase-content">
-            <div class="phase-number">04</div>
-            <h2 class="phase-title">Defend</h2>
-            <p class="phase-description">MDR with advanced analytics, threat intelligence, and expert SOC analysts. Rapid containment and proactive defence against evolving cyber attacks.</p>
-          </div>
-          <div class="phase-visual">
-            <div class="phase-icon phase-icon-defend" aria-hidden="true">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100 20 L170 60 L170 120 Q170 170 100 190 Q30 170 30 120 L30 60 Z" fill="var(--blue-wash)" stroke="var(--color-primary)" stroke-width="2"/>
-                <path d="M100 45 L145 70 L145 115 Q145 150 100 165 Q55 150 55 115 L55 70 Z" fill="none" stroke="var(--color-accent)" stroke-width="1.5" opacity="0.6"/>
-                <polyline points="78,105 93,120 125,85" fill="none" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="100" cy="105" r="35" fill="none" stroke="var(--color-accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.4">
-                  <animateTransform attributeName="transform" type="rotate" from="0 100 105" to="360 100 105" dur="20s" repeatCount="indefinite"/>
-                </circle>
-              </svg>
+            <div class="lifecycle-visuals">
+              <div class="lifecycle-visual active" data-phase="0">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-dasharray="8 4" opacity="0.4"/>
+                  <circle cx="100" cy="100" r="55" fill="none" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                  <circle cx="100" cy="100" r="30" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="2"/>
+                  <circle cx="100" cy="100" r="8" fill="var(--color-accent)"/>
+                  <line x1="100" y1="20" x2="100" y2="42" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
+                  <line x1="100" y1="158" x2="100" y2="180" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
+                  <line x1="20" y1="100" x2="42" y2="100" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
+                  <line x1="158" y1="100" x2="180" y2="100" stroke="var(--color-accent)" stroke-width="2" opacity="0.6"/>
+                  <circle cx="100" cy="20" r="4" fill="var(--color-primary)"/>
+                  <circle cx="180" cy="100" r="4" fill="var(--color-primary)"/>
+                  <circle cx="100" cy="180" r="4" fill="var(--color-primary)"/>
+                  <circle cx="20" cy="100" r="4" fill="var(--color-primary)"/>
+                </svg>
+              </div>
+              <div class="lifecycle-visual" data-phase="1">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="40" y="50" width="120" height="100" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+                  <rect x="55" y="65" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
+                  <rect x="105" y="65" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
+                  <rect x="55" y="105" width="40" height="30" rx="4" fill="var(--blue-wash)" stroke="var(--color-accent)" stroke-width="1.5"/>
+                  <rect x="105" y="105" width="40" height="30" rx="4" fill="var(--color-accent)" stroke="var(--color-accent)" stroke-width="1.5" opacity="0.3"/>
+                  <polyline points="65,80 72,87 85,72" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="115,80 122,87 135,72" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="65,120 72,127 85,112" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="160" cy="50" r="15" fill="var(--color-accent)" opacity="0.15"/>
+                  <text x="160" y="55" text-anchor="middle" fill="var(--color-accent)" font-size="14" font-weight="700">&#x2713;</text>
+                </svg>
+              </div>
+              <div class="lifecycle-visual" data-phase="2">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="30" y="40" width="140" height="90" rx="8" fill="none" stroke="var(--color-primary)" stroke-width="2"/>
+                  <line x1="30" y1="60" x2="170" y2="60" stroke="var(--color-primary)" stroke-width="1" opacity="0.3"/>
+                  <circle cx="45" cy="50" r="4" fill="#e74c3c" opacity="0.7"/>
+                  <circle cx="58" cy="50" r="4" fill="#f39c12" opacity="0.7"/>
+                  <circle cx="71" cy="50" r="4" fill="#2ecc71" opacity="0.7"/>
+                  <polyline points="45,110 65,90 85,100 105,75 125,85 145,70 155,78" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="155" cy="78" r="4" fill="var(--color-accent)"/>
+                  <rect x="45" y="150" width="25" height="20" rx="3" fill="var(--color-accent)" opacity="0.2"/>
+                  <rect x="80" y="145" width="25" height="25" rx="3" fill="var(--color-accent)" opacity="0.3"/>
+                  <rect x="115" y="140" width="25" height="30" rx="3" fill="var(--color-accent)" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="lifecycle-visual" data-phase="3">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100 20 L170 60 L170 120 Q170 170 100 190 Q30 170 30 120 L30 60 Z" fill="var(--blue-wash)" stroke="var(--color-primary)" stroke-width="2"/>
+                  <path d="M100 45 L145 70 L145 115 Q145 150 100 165 Q55 150 55 115 L55 70 Z" fill="none" stroke="var(--color-accent)" stroke-width="1.5" opacity="0.6"/>
+                  <polyline points="78,105 93,120 125,85" fill="none" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="100" cy="105" r="35" fill="none" stroke="var(--color-accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.4">
+                    <animateTransform attributeName="transform" type="rotate" from="0 100 105" to="360 100 105" dur="20s" repeatCount="indefinite"/>
+                  </circle>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -311,14 +273,8 @@
           </div>
           <h3 class="service-title">Platform Assessment</h3>
           <p class="service-desc">11SI delivers independent, consulting-led evaluation of enterprise cybersecurity environments across hyperscale ecosystems.</p>
-          <ul class="service-tags">
-            <li>Architecture Analysis</li>
-            <li>Regulatory Mapping</li>
-            <li>Strategic Roadmap</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Platform Assessment">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>Architecture Analysis</li><li>Regulatory Mapping</li><li>Strategic Roadmap</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about Platform Assessment"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card reveal-on-scroll">
@@ -328,14 +284,8 @@
           </div>
           <h3 class="service-title">Implementation & Deployment</h3>
           <p class="service-desc">Certified engineering teams design and deploy enterprise-grade security architectures across network, identity, endpoint, cloud, and data platforms.</p>
-          <ul class="service-tags">
-            <li>Architecture Design</li>
-            <li>Platform Integration</li>
-            <li>Migration & Rollout</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Implementation and Deployment">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>Architecture Design</li><li>Platform Integration</li><li>Migration & Rollout</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about Implementation"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card reveal-on-scroll">
@@ -345,14 +295,8 @@
           </div>
           <h3 class="service-title">Managed Services</h3>
           <p class="service-desc">11SI provides structured operational oversight across hyperscale security platforms through certified engineering teams and tiered escalation models.</p>
-          <ul class="service-tags">
-            <li>DefendPro</li>
-            <li>Platform Optimization</li>
-            <li>Structured Escalation</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Managed Services">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>DefendPro</li><li>Platform Optimization</li><li>Structured Escalation</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about Managed Services"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card reveal-on-scroll">
@@ -362,14 +306,8 @@
           </div>
           <h3 class="service-title">Managed Detection & Response</h3>
           <p class="service-desc">Our delivery model reduces noise, improves response precision, and strengthens operational visibility across hyperscale security ecosystems.</p>
-          <ul class="service-tags">
-            <li>Advanced Correlation</li>
-            <li>Alert Reduction</li>
-            <li>Threat Hunting</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Managed Detection and Response">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>Advanced Correlation</li><li>Alert Reduction</li><li>Threat Hunting</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about MDR"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card reveal-on-scroll">
@@ -379,14 +317,8 @@
           </div>
           <h3 class="service-title">Data Discovery & Protection</h3>
           <p class="service-desc">Continuous data discovery, classification enforcement, and risk visibility delivered as a managed service layer.</p>
-          <ul class="service-tags">
-            <li>Continuous Discovery</li>
-            <li>Classification Enforcement</li>
-            <li>Data Visibility</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Data Discovery and Protection">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>Continuous Discovery</li><li>Classification Enforcement</li><li>Data Visibility</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about Data Protection"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card reveal-on-scroll">
@@ -396,20 +328,14 @@
           </div>
           <h3 class="service-title">Threat Surface Management</h3>
           <p class="service-desc">11SI monitors and benchmarks your external attack surface through structured exposure scanning, risk scoring, and posture analysis.</p>
-          <ul class="service-tags">
-            <li>Exposure Monitoring</li>
-            <li>Risk Scoring</li>
-            <li>Executive Reporting</li>
-          </ul>
-          <a href="#contact" class="service-link" aria-label="Learn more about Threat Surface Management">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <ul class="service-tags"><li>Exposure Monitoring</li><li>Risk Scoring</li><li>Executive Reporting</li></ul>
+          <a href="#contact" class="service-link" aria-label="Learn more about Threat Surface Management"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-4-4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ TECHNOLOGY PARTNERS ============ -->
+  <!-- ============ TECHNOLOGY PARTNERS (HUB FLOW DIAGRAM) ============ -->
   <section class="partners" id="partners" aria-label="Technology Partners">
     <div class="container">
       <div class="section-header">
@@ -418,40 +344,60 @@
         <p class="section-subtitle">Independent. We architect with the right platform &mdash; not the preferred one.</p>
       </div>
 
-      <div class="hub-diagram">
-        <div class="hub-center">
-          <img src="images/logo.png" alt="11SI" width="80" height="32">
+      <div class="hub-flow reveal-on-scroll">
+        <div class="hub-row hub-vendors-row">
+          <div class="hub-box">Microsoft</div>
+          <div class="hub-box">CrowdStrike</div>
+          <div class="hub-box">Fortinet</div>
+          <div class="hub-box">Sophos</div>
+          <div class="hub-box">Palo Alto</div>
+          <div class="hub-box">Okta</div>
+          <div class="hub-box">Rapid7</div>
+          <div class="hub-box">Cloudflare</div>
         </div>
-        <div class="hub-spokes" aria-hidden="true">
-          <div class="hub-spoke" style="--angle: 0deg"><span class="hub-vendor">Microsoft</span></div>
-          <div class="hub-spoke" style="--angle: 45deg"><span class="hub-vendor">CrowdStrike</span></div>
-          <div class="hub-spoke" style="--angle: 90deg"><span class="hub-vendor">Fortinet</span></div>
-          <div class="hub-spoke" style="--angle: 135deg"><span class="hub-vendor">Sophos</span></div>
-          <div class="hub-spoke" style="--angle: 180deg"><span class="hub-vendor">Palo Alto</span></div>
-          <div class="hub-spoke" style="--angle: 225deg"><span class="hub-vendor">Okta</span></div>
-          <div class="hub-spoke" style="--angle: 270deg"><span class="hub-vendor">Rapid7</span></div>
-          <div class="hub-spoke" style="--angle: 315deg"><span class="hub-vendor">Cloudflare</span></div>
+        <div class="hub-curves-wrap">
+          <svg class="hub-svg hub-svg-top" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path d="M50,0 C50,60 400,60 400,120"/>
+            <path d="M150,0 C150,60 400,60 400,120"/>
+            <path d="M250,0 C250,60 400,60 400,120"/>
+            <path d="M350,0 C350,60 400,60 400,120"/>
+            <path d="M450,0 C450,60 400,60 400,120"/>
+            <path d="M550,0 C550,60 400,60 400,120"/>
+            <path d="M650,0 C650,60 400,60 400,120"/>
+            <path d="M750,0 C750,60 400,60 400,120"/>
+          </svg>
         </div>
-        <svg class="hub-lines" viewBox="0 0 500 500" aria-hidden="true">
-          <circle cx="250" cy="250" r="180" fill="none" stroke="var(--color-accent)" stroke-width="1" opacity="0.2" stroke-dasharray="6 4"/>
-          <circle cx="250" cy="250" r="120" fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.15" stroke-dasharray="4 3"/>
-        </svg>
-      </div>
-
-      <div class="partner-categories">
-        <button class="cat-pill active" data-category="all">All</button>
-        <button class="cat-pill" data-category="network">Network Security</button>
-        <button class="cat-pill" data-category="endpoint">Endpoint Security</button>
-        <button class="cat-pill" data-category="identity">Identity & Access</button>
-        <button class="cat-pill" data-category="cloud">Cloud Security</button>
-        <button class="cat-pill" data-category="zerotrust">Zero Trust</button>
-        <button class="cat-pill" data-category="siem">SIEM & SOAR</button>
-        <button class="cat-pill" data-category="email">Email Security</button>
+        <div class="hub-center-node">
+          <img src="images/logo.png" alt="11SI" width="60" height="24">
+          <span>Managed Hub</span>
+        </div>
+        <div class="hub-curves-wrap">
+          <svg class="hub-svg hub-svg-bottom" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path d="M400,0 C400,60 50,60 50,120"/>
+            <path d="M400,0 C400,60 150,60 150,120"/>
+            <path d="M400,0 C400,60 250,60 250,120"/>
+            <path d="M400,0 C400,60 350,60 350,120"/>
+            <path d="M400,0 C400,60 450,60 450,120"/>
+            <path d="M400,0 C400,60 550,60 550,120"/>
+            <path d="M400,0 C400,60 650,60 650,120"/>
+            <path d="M400,0 C400,60 750,60 750,120"/>
+          </svg>
+        </div>
+        <div class="hub-row hub-categories-row">
+          <div class="hub-box hub-cat">Network Security</div>
+          <div class="hub-box hub-cat">Endpoint Security</div>
+          <div class="hub-box hub-cat">Identity & Access</div>
+          <div class="hub-box hub-cat">Cloud Security</div>
+          <div class="hub-box hub-cat">Zero Trust</div>
+          <div class="hub-box hub-cat">SIEM & SOAR</div>
+          <div class="hub-box hub-cat">Email Security</div>
+          <div class="hub-box hub-cat">Data Security</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ GLOBAL SOC OPERATIONS ============ -->
+  <!-- ============ GLOBAL SOC OPERATIONS (RADWARE THREAT MAP) ============ -->
   <section class="soc" id="soc" aria-label="Global SOC Operations">
     <div class="container">
       <div class="section-header">
@@ -485,18 +431,20 @@
         </div>
 
         <div class="soc-threatmap">
-          <div class="threatmap-card">
-            <div class="threatmap-header">
-              <span class="threatmap-title">SOC THREAT MAP</span>
+          <div class="threatmap-iframe-wrap">
+            <div class="threatmap-bar">
+              <span class="threatmap-title">LIVE THREAT MAP</span>
               <span class="threatmap-live"><span class="live-dot"></span> Live</span>
             </div>
-            <div class="threatmap-feed" id="threatFeed">
-              <div class="threat-item threat-high">Brute Force &middot; 14.2k attempts blocked</div>
-              <div class="threat-item threat-critical">C2 Callback Blocked &middot; APAC</div>
-              <div class="threat-item threat-medium">DLP Trigger &middot; 3 files quarantined</div>
-              <div class="threat-item threat-high">Suspicious Login &middot; EU-West</div>
-              <div class="threat-item threat-low">Scan Complete &middot; 0 vulnerabilities</div>
-              <div class="threat-item threat-low">Patched &middot; CVE-2025-1847</div>
+            <div class="threatmap-frame">
+              <iframe src="https://livethreatmap.radware.com/" title="Live Threat Map by Radware" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
+            <div class="threatmap-actions">
+              <a href="mailto:prashant@11si.com" class="threatmap-btn threatmap-btn-alert">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4m0 4h.01"/></svg>
+                Under Attack
+              </a>
+              <a href="#contact" class="threatmap-btn threatmap-btn-contact">Contact Sales</a>
             </div>
           </div>
         </div>

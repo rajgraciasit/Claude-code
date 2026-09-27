@@ -1,15 +1,15 @@
 /* ============================================
-   11SI — Main JavaScript
-   Globe Animation, Text Cycling, Scroll Effects
+   11SI — Main JavaScript V2
+   Globe, Text Cycling, Lifecycle Scroll, Hub Draw
    ============================================ */
 
 (function () {
   'use strict';
 
   // ---- Navbar Scroll Effect ----
-  const navbar = document.getElementById('navbar');
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  var navbar = document.getElementById('navbar');
+  var navToggle = document.getElementById('navToggle');
+  var navMenu = document.getElementById('navMenu');
 
   function handleNavScroll() {
     if (window.scrollY > 40) {
@@ -21,7 +21,6 @@
   window.addEventListener('scroll', handleNavScroll, { passive: true });
   handleNavScroll();
 
-  // Mobile nav toggle
   if (navToggle) {
     navToggle.addEventListener('click', function () {
       navToggle.classList.toggle('active');
@@ -30,7 +29,6 @@
     });
   }
 
-  // Mobile dropdown toggle
   document.querySelectorAll('.has-dropdown > .nav-link').forEach(function (link) {
     link.addEventListener('click', function (e) {
       if (window.innerWidth <= 768) {
@@ -40,7 +38,6 @@
     });
   });
 
-  // Close mobile nav on link click
   document.querySelectorAll('.nav-menu a').forEach(function (a) {
     a.addEventListener('click', function () {
       if (navMenu.classList.contains('open')) {
@@ -131,7 +128,6 @@
     var prefix = el.getAttribute('data-prefix') || '';
     var suffix = el.getAttribute('data-suffix') || '';
     var duration = 2000;
-    var start = 0;
     var startTime = null;
 
     function step(timestamp) {
@@ -150,65 +146,6 @@
     requestAnimationFrame(step);
   }
 
-  // ---- SOC Threat Feed Animation ----
-  var threatFeed = document.getElementById('threatFeed');
-  if (threatFeed) {
-    var threats = [
-      { text: 'Brute Force · 14.2k attempts blocked', level: 'threat-high' },
-      { text: 'C2 Callback Blocked · APAC', level: 'threat-critical' },
-      { text: 'DLP Trigger · 3 files quarantined', level: 'threat-medium' },
-      { text: 'Suspicious Login · EU-West', level: 'threat-high' },
-      { text: 'Phishing Email Blocked · NA-East', level: 'threat-critical' },
-      { text: 'Scan Complete · 0 vulnerabilities', level: 'threat-low' },
-      { text: 'Patched · CVE-2025-1847', level: 'threat-low' },
-      { text: 'Lateral Movement Detected · Contained', level: 'threat-critical' },
-      { text: 'Ransomware Payload Blocked', level: 'threat-critical' },
-      { text: 'New Device Enrolled · Verified', level: 'threat-low' },
-      { text: 'DNS Tunnel Attempt Blocked', level: 'threat-high' },
-      { text: 'Privilege Escalation · Blocked', level: 'threat-critical' },
-      { text: 'Endpoint Isolation · Completed', level: 'threat-medium' },
-      { text: 'Firewall Rule Updated · Auto', level: 'threat-low' },
-      { text: 'MFA Challenge · 3 failures · APAC', level: 'threat-high' },
-      { text: 'Cloud Config Drift Detected', level: 'threat-medium' }
-    ];
-
-    var threatIndex = 6;
-
-    setInterval(function () {
-      var newThreat = threats[threatIndex % threats.length];
-      var div = document.createElement('div');
-      div.className = 'threat-item ' + newThreat.level;
-      div.textContent = newThreat.text;
-      div.style.opacity = '0';
-      div.style.transform = 'translateX(-8px)';
-
-      threatFeed.insertBefore(div, threatFeed.firstChild);
-
-      requestAnimationFrame(function () {
-        div.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        div.style.opacity = '1';
-        div.style.transform = 'translateX(0)';
-      });
-
-      if (threatFeed.children.length > 8) {
-        var last = threatFeed.lastElementChild;
-        last.style.opacity = '0';
-        setTimeout(function () { if (last.parentNode) last.parentNode.removeChild(last); }, 300);
-      }
-
-      threatIndex++;
-    }, 3000);
-  }
-
-  // ---- Partner Category Pills ----
-  var catPills = document.querySelectorAll('.cat-pill');
-  catPills.forEach(function (pill) {
-    pill.addEventListener('click', function () {
-      catPills.forEach(function (p) { p.classList.remove('active'); });
-      pill.classList.add('active');
-    });
-  });
-
   // ---- Smooth Scroll for Anchor Links ----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -223,6 +160,81 @@
       }
     });
   });
+
+  // ---- Lifecycle Sticky Scroll ----
+  var lifecycleScroll = document.querySelector('.lifecycle-scroll');
+  if (lifecycleScroll && window.innerWidth > 768) {
+    var dots = document.querySelectorAll('.timeline-dot');
+    var panels = document.querySelectorAll('.lifecycle-panel');
+    var visuals = document.querySelectorAll('.lifecycle-visual');
+    var progressBar = document.querySelector('.timeline-progress');
+    var numPhases = 4;
+
+    function updateLifecycle() {
+      var rect = lifecycleScroll.getBoundingClientRect();
+      var scrollHeight = lifecycleScroll.offsetHeight - window.innerHeight;
+      var scrolled = -rect.top;
+      var progress = Math.max(0, Math.min(1, scrolled / scrollHeight));
+      var activeIndex = Math.min(Math.floor(progress * numPhases), numPhases - 1);
+
+      if (progressBar) {
+        progressBar.style.height = (progress * 100) + '%';
+      }
+
+      dots.forEach(function (dot, i) {
+        dot.classList.remove('active', 'completed');
+        if (i < activeIndex) dot.classList.add('completed');
+        else if (i === activeIndex) dot.classList.add('active');
+      });
+
+      panels.forEach(function (panel, i) {
+        panel.classList.toggle('active', i === activeIndex);
+      });
+
+      visuals.forEach(function (visual, i) {
+        visual.classList.toggle('active', i === activeIndex);
+      });
+    }
+
+    window.addEventListener('scroll', updateLifecycle, { passive: true });
+    updateLifecycle();
+  }
+
+  // Mobile lifecycle: click dots to switch
+  if (window.innerWidth <= 768) {
+    var mobileDots = document.querySelectorAll('.timeline-dot');
+    mobileDots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        mobileDots.forEach(function (d) { d.classList.remove('active'); });
+        dot.classList.add('active');
+        var panels = document.querySelectorAll('.lifecycle-panel');
+        var visuals = document.querySelectorAll('.lifecycle-visual');
+        panels.forEach(function (p, j) { p.classList.toggle('active', j === i); });
+        visuals.forEach(function (v, j) { v.classList.toggle('active', j === i); });
+      });
+    });
+    // Activate first
+    var firstDot = document.querySelector('.timeline-dot');
+    if (firstDot) firstDot.classList.add('active');
+    var firstPanel = document.querySelector('.lifecycle-panel');
+    if (firstPanel) firstPanel.classList.add('active');
+    var firstVisual = document.querySelector('.lifecycle-visual');
+    if (firstVisual) firstVisual.classList.add('active');
+  }
+
+  // ---- Hub Flow SVG Line-Draw Animation ----
+  var hubFlow = document.querySelector('.hub-flow');
+  if (hubFlow && 'IntersectionObserver' in window) {
+    var hubObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          hubFlow.classList.add('revealed');
+          hubObserver.unobserve(hubFlow);
+        }
+      });
+    }, { threshold: 0.2 });
+    hubObserver.observe(hubFlow);
+  }
 
   // ---- Globe Animation (Canvas) ----
   var canvas = document.getElementById('globeCanvas');
@@ -274,11 +286,17 @@
     function drawGlobe() {
       ctx.clearRect(0, 0, width, height);
 
+      // Darker wireframe colors for white background
+      var wireColor = 'rgba(11, 61, 108, 0.12)';
+      var wireColorFaint = 'rgba(11, 61, 108, 0.06)';
+      var dotColor = [11, 61, 108];
+      var connColor = [11, 61, 108];
+
       // Globe outline
       ctx.beginPath();
       ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(57, 180, 229, 0.08)';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = wireColor;
+      ctx.lineWidth = 1.2;
       ctx.stroke();
 
       // Latitude lines
@@ -288,8 +306,8 @@
         var latY = centerY + Math.cos(latAngle) * radius;
         ctx.beginPath();
         ctx.ellipse(centerX, latY, latRadius, latRadius * 0.15, 0, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(57, 180, 229, 0.05)';
-        ctx.lineWidth = 0.5;
+        ctx.strokeStyle = wireColorFaint;
+        ctx.lineWidth = 0.6;
         ctx.stroke();
       }
 
@@ -310,8 +328,8 @@
             ctx.lineTo(px, py);
           }
         }
-        ctx.strokeStyle = 'rgba(57, 180, 229, 0.05)';
-        ctx.lineWidth = 0.5;
+        ctx.strokeStyle = wireColorFaint;
+        ctx.lineWidth = 0.6;
         ctx.stroke();
       }
 
@@ -326,12 +344,9 @@
         projected.push(proj);
       }
 
-      // Sort by depth for correct rendering
       projected.sort(function (a, b) { return a.z - b.z; });
 
-      // Draw connections between nearby front-facing points
-      ctx.strokeStyle = 'rgba(57, 180, 229, 0.06)';
-      ctx.lineWidth = 0.5;
+      // Connections
       for (var i = 0; i < projected.length; i++) {
         if (projected[i].z < 0) continue;
         for (var j = i + 1; j < projected.length; j++) {
@@ -340,33 +355,34 @@
           var dy = projected[i].y - projected[j].y;
           var dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < radius * 0.25) {
-            var alpha = (1 - dist / (radius * 0.25)) * 0.12 * projected[i].depth * projected[j].depth;
+            var alpha = (1 - dist / (radius * 0.25)) * 0.18 * projected[i].depth * projected[j].depth;
             ctx.beginPath();
             ctx.moveTo(projected[i].x, projected[i].y);
             ctx.lineTo(projected[j].x, projected[j].y);
-            ctx.strokeStyle = 'rgba(57, 180, 229, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(' + connColor.join(',') + ', ' + alpha + ')';
+            ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         }
       }
 
-      // Draw dots
+      // Dots
       for (var i = 0; i < projected.length; i++) {
         var pt = projected[i];
         if (pt.z < -0.2) continue;
-        var alpha = Math.max(0.08, pt.depth * 0.7);
-        var pulseAlpha = 0.3 + 0.3 * Math.sin(pt.pulse);
+        var alpha = Math.max(0.12, pt.depth * 0.8);
+        var pulseAlpha = 0.4 + 0.3 * Math.sin(pt.pulse);
         var dotSize = pt.size * (0.5 + pt.depth * 0.8);
 
         ctx.beginPath();
         ctx.arc(pt.x, pt.y, dotSize, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(57, 180, 229, ' + (alpha * pulseAlpha) + ')';
+        ctx.fillStyle = 'rgba(' + dotColor.join(',') + ', ' + (alpha * pulseAlpha) + ')';
         ctx.fill();
 
         if (pt.depth > 0.7 && pt.size > 2) {
           ctx.beginPath();
           ctx.arc(pt.x, pt.y, dotSize + 3, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(57, 180, 229, ' + (alpha * 0.1) + ')';
+          ctx.fillStyle = 'rgba(' + dotColor.join(',') + ', ' + (alpha * 0.12) + ')';
           ctx.fill();
         }
       }
@@ -375,7 +391,6 @@
       animFrameId = requestAnimationFrame(drawGlobe);
     }
 
-    // Pause when not visible
     var globeObserver = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) {
         if (!animFrameId) drawGlobe();
@@ -394,9 +409,7 @@
     var resizeTimer;
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        resizeCanvas();
-      }, 200);
+      resizeTimer = setTimeout(resizeCanvas, 200);
     });
   }
 

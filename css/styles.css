@@ -319,7 +319,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   justify-content: center;
   overflow: hidden;
   background: var(--color-white);
-  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 0;
 }
 
 .hero-bg {
@@ -342,8 +342,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ============================================ */
 .vendor-marquee {
   background: var(--color-white);
+  border-top: 1px solid var(--gray-100);
   border-bottom: 1px solid var(--gray-100);
-  padding: 24px 0;
+  padding: 28px 0;
   overflow: hidden;
   position: relative;
 }
@@ -398,10 +399,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   color: var(--color-primary);
 }
 
-.marquee-logo svg {
+.marquee-logo svg,
+.marquee-logo img {
   display: block;
-  height: 28px;
+  height: 32px;
   width: auto;
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter 0.3s;
+}
+
+.marquee-logo:hover svg,
+.marquee-logo:hover img {
+  filter: grayscale(0%) opacity(1);
 }
 
 @keyframes marqueeScroll {
@@ -666,6 +675,21 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   letter-spacing: 0.3px;
 }
 
+.iso-card-number {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(228, 31, 38, 0.12);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.iso-card.active .iso-card-number {
+  color: rgba(228, 31, 38, 0.25);
+}
+
 /* ============================================
    SERVICES
    ============================================ */
@@ -818,10 +842,30 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   min-height: 56px;
 }
 
-.hub-vendor-logo svg {
+.hub-vendor-logo svg,
+.hub-vendor-logo img {
   display: block;
   max-width: 100%;
+  max-height: 32px;
   height: auto;
+  object-fit: contain;
+}
+
+.hub-vendor-logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-vendor-logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--color-accent) 50%, transparent 50%);
+  opacity: 0.8;
+  border-radius: 0 8px 0 0;
 }
 
 .hub-box:hover {

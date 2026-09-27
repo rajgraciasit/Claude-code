@@ -66,6 +66,27 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   padding: 0 16px;
 }
 
+/* ---------- Grid Background Pattern ---------- */
+.hero,
+.lifecycle,
+.partners {
+  position: relative;
+}
+
+.hero::before,
+.lifecycle::before,
+.partners::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ---------- Section Shared ---------- */
 .section-header {
   text-align: center;
@@ -73,7 +94,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .section-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -82,9 +105,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   margin-bottom: 16px;
 }
 
+.section-label::before,
+.section-label::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.5;
+}
+
 .section-title {
   font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--color-text);
   line-height: 1.2;
   margin-bottom: 16px;
@@ -104,7 +136,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   align-items: center;
   justify-content: center;
   padding: 14px 32px;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   transition: var(--transition);
@@ -150,20 +182,26 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ============================================ */
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 12px; left: 50%; right: auto;
+  transform: translateX(-50%);
   z-index: 1000;
   height: var(--nav-height);
+  width: calc(100% - 48px);
+  max-width: 1200px;
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .navbar.scrolled {
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.08);
 }
 
 .nav-container {
@@ -205,7 +243,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .nav-cta {
   background: var(--color-accent) !important;
   color: var(--color-white) !important;
-  border-radius: 50px !important;
+  border-radius: 8px !important;
   padding: 10px 24px !important;
   margin-left: 8px;
   font-weight: 600 !important;
@@ -384,7 +422,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .hero-headline {
   font-size: clamp(36px, 6vw, 64px);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--color-text);
   line-height: 1.15;
   margin-bottom: 40px;
@@ -561,9 +599,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .phase-name {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--color-primary);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--color-accent);
   margin-bottom: 16px;
   line-height: 1.2;
 }
@@ -673,7 +711,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .service-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 12px;
   line-height: 1.3;
@@ -697,10 +735,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .service-tags li {
   font-size: 12px;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-accent);
   padding: 4px 12px;
-  background: var(--blue-wash);
-  border-radius: 50px;
+  background: transparent;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+  border-radius: 6px;
 }
 
 .service-link {
@@ -709,7 +748,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: var(--gray-50);
   color: var(--gray-400);
   transition: var(--transition);
@@ -1038,26 +1077,41 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .soc-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.12), rgba(var(--color-primary-rgb), 0.08));
+  border: 1px solid rgba(var(--color-accent-rgb), 0.15);
 }
 
 .stat-card {
   text-align: center;
   padding: 36px 20px;
-  border-radius: var(--radius-md);
   transition: var(--transition);
+  position: relative;
+}
+
+.stat-card + .stat-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(var(--color-accent-rgb), 0.2);
 }
 
 .stat-card.stat-accent {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: transparent;
+  color: var(--color-primary);
 }
 
 .stat-value {
   font-size: clamp(32px, 4vw, 48px);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.1;
   margin-bottom: 8px;
+  color: var(--color-accent);
 }
 
 .stat-label {
@@ -1065,12 +1119,12 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: var(--color-text-secondary);
   opacity: 0.75;
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  background: rgba(var(--color-accent-rgb), 0.05);
 }
 
 /* ============================================
@@ -1095,7 +1149,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .cta-title {
   font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--color-white);
   margin-bottom: 20px;
   line-height: 1.25;
@@ -1122,9 +1176,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    FOOTER
    ============================================ */
 .footer {
-  background: var(--color-text);
-  color: rgba(255,255,255,0.7);
+  background: var(--color-white);
+  color: var(--color-text-secondary);
   padding: 80px 0 0;
+  border-top: 1px solid var(--gray-100);
 }
 
 .footer-grid {
@@ -1132,14 +1187,13 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
   gap: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .footer-logo {
   height: 40px;
   width: auto;
   margin-bottom: 16px;
-  filter: brightness(0) invert(1);
 }
 
 .footer-desc {
@@ -1147,6 +1201,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   line-height: 1.7;
   margin-bottom: 24px;
   max-width: 320px;
+  color: var(--color-text-secondary);
 }
 
 .footer-contact-list {
@@ -1161,7 +1216,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-secondary);
   transition: var(--transition);
 }
 
@@ -1175,27 +1230,28 @@ a.footer-contact-item:hover {
 }
 
 .social-link {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.5);
+  color: var(--color-white);
   transition: var(--transition);
 }
 .social-link:hover {
   background: var(--color-accent);
-  color: var(--color-white);
 }
 
 .footer-links-col h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
   margin-bottom: 20px;
   letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .footer-links-col ul {
@@ -1206,7 +1262,7 @@ a.footer-contact-item:hover {
 
 .footer-links-col a {
   font-size: 14px;
-  color: rgba(255,255,255,0.55);
+  color: var(--color-text-secondary);
   transition: var(--transition);
 }
 .footer-links-col a:hover {
@@ -1223,7 +1279,7 @@ a.footer-contact-item:hover {
 
 .footer-bottom p {
   font-size: 13px;
-  color: rgba(255,255,255,0.35);
+  color: var(--gray-400);
 }
 
 .footer-bottom-links {
@@ -1233,7 +1289,7 @@ a.footer-contact-item:hover {
 
 .footer-bottom-links a {
   font-size: 13px;
-  color: rgba(255,255,255,0.35);
+  color: var(--gray-400);
   transition: var(--transition);
 }
 .footer-bottom-links a:hover {
@@ -1352,6 +1408,12 @@ a.footer-contact-item:hover {
 
   .hero-headline { min-height: 120px; }
 
+  .navbar {
+    width: calc(100% - 24px);
+    top: 8px;
+    border-radius: 12px;
+  }
+
   .marquee-item { font-size: 13px; }
   .marquee-content { gap: 36px; }
 
@@ -1414,6 +1476,11 @@ a.footer-contact-item:hover {
 
   .soc-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .stat-card + .stat-card::before {
+    display: none;
   }
 
   .hub-row {

@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="11SI designs, implements and manages the Okta Identity Security Platform - securing workforce, customer and partner identities with SSO, Adaptive MFA, Identity Governance, Lifecycle Management and Zero Trust.">
+  <meta name="keywords" content="Okta, Identity Security, SSO, MFA, Zero Trust, Identity Governance, 11SI, managed services, cybersecurity, IAM">
+  <meta name="author" content="11SI">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E41F26">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Okta Identity Security | 11SI">
+  <meta property="og:description" content="11SI designs, implements and manages the Okta Identity Security Platform - securing workforce, customer and partner identities.">
+  <meta property="og:url" content="https://11si.com/solutions/okta.html">
+  <meta property="og:site_name" content="11SI">
+
+  <title>Okta Identity Security | 11SI</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    /* ======== Okta Solution Page Styles ======== */
+
+    /* --- Hero --- */
+    .okta-hero {
+      position: relative;
+      padding: 140px 0 100px;
+      overflow: hidden;
+      background: var(--color-white);
+    }
+    .okta-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .okta-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .okta-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .okta-hero-title {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--color-text);
+      margin-bottom: 24px;
+    }
+    .okta-hero-title em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+    .okta-hero-desc {
+      font-size: 17px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-ctas .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      padding: 8px 16px;
+      border-radius: 100px;
+    }
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    /* Orbit Graphic */
+    .orbit-container {
+      position: relative;
+      width: 420px;
+      height: 420px;
+      margin: 0 auto;
+    }
+    .orbit-ring {
+      position: absolute;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .orbit-ring-1 {
+      width: 280px;
+      height: 280px;
+    }
+    .orbit-ring-2 {
+      width: 400px;
+      height: 400px;
+    }
+    .orbit-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .orbit-center .okta-logo-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00297A;
+      letter-spacing: -0.5px;
+    }
+    .orbit-node {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 44px;
+      height: 44px;
+      margin: -22px 0 0 -22px;
+      z-index: 2;
+    }
+    .orbit-node .icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .orbit-node .icon-circle svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-text);
+    }
+    .orbit-node .tag-label {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .orbit-node .tag-label .tag-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    /* --- Section Shared --- */
+    .okta-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .okta-section--gray {
+      background: var(--gray-50);
+    }
+    .okta-section--dark {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+    .okta-section--dark .section-label {
+      color: var(--color-accent-light);
+    }
+    .okta-section--dark .section-title {
+      color: var(--color-white);
+    }
+    .okta-section--dark .section-subtitle,
+    .okta-section--dark .okta-text-secondary {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* --- Partnership Section --- */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .partner-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .partner-item {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 28px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .partner-item:hover,
+    .partner-item.active {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+    }
+    .partner-item-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .partner-item-num {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-accent);
+      min-width: 28px;
+    }
+    .partner-item h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.3;
+    }
+    .partner-item p {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-top: 8px;
+      padding-left: 44px;
+    }
+    .partner-visual {
+      background: var(--color-primary);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      color: var(--color-white);
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      min-height: 400px;
+      position: sticky;
+      top: 100px;
+    }
+    .partner-visual-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .pv-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .pv-dot--red { background: #ff5f56; }
+    .pv-dot--yellow { background: #ffbd2e; }
+    .pv-dot--green { background: #27c93f; }
+    .pv-line {
+      color: rgba(255,255,255,0.5);
+    }
+    .pv-line .pv-key {
+      color: var(--color-accent-light);
+    }
+    .pv-line .pv-val {
+      color: #7dd3fc;
+    }
+    .pv-line .pv-str {
+      color: #86efac;
+    }
+    .pv-line .pv-num {
+      color: #fbbf24;
+    }
+
+    /* --- Platform Section --- */
+    .platform-header-area {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .platform-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      padding: 28px;
+      transition: var(--transition);
+    }
+    .platform-card:hover {
+      border-color: var(--color-accent);
+      background: rgba(228,31,38,0.05);
+    }
+    .platform-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .platform-card h4 svg {
+      flex-shrink: 0;
+    }
+    .platform-card-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .platform-card-items span {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      padding-left: 12px;
+      position: relative;
+    }
+    .platform-card-items span::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+    .deploy-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .deploy-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border-radius: 100px;
+    }
+    .deploy-tag svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--color-accent-light);
+    }
+
+    /* --- Challenges (Why Zero Trust) --- */
+    .challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .challenge-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 28px;
+      transition: var(--transition);
+    }
+    .challenge-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .challenge-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .challenge-card h3 svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-accent);
+    }
+    .challenge-card p {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .challenge-summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .challenge-summary-card {
+      padding: 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+    .challenge-summary-card.before {
+      background: rgba(228,31,38,0.06);
+      border: 1px solid rgba(228,31,38,0.15);
+      color: #991b1b;
+    }
+    .challenge-summary-card.after {
+      background: rgba(34,197,94,0.06);
+      border: 1px solid rgba(34,197,94,0.2);
+      color: #166534;
+    }
+
+    /* --- Solution Areas (Pillars) --- */
+    .pillars-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .pillar-tab {
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      border: 1px solid var(--gray-200);
+      color: var(--color-text-secondary);
+      background: var(--color-white);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pillar-tab:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .pillar-tab.active {
+      background: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
+    .pillar-panel {
+      display: none;
+    }
+    .pillar-panel.active {
+      display: block;
+    }
+    .pillar-panel-header {
+      margin-bottom: 32px;
+    }
+    .pillar-panel-header h3 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .pillar-panel-header p {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      max-width: 720px;
+    }
+    .pillar-offerings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .pillar-offering {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .pillar-offering:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar-offering-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .pillar-offering h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .pillar-offering .offering-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--color-accent);
+      background: var(--accent-wash);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .pillar-offering p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* --- Delivery --- */
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .delivery-card {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .delivery-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .delivery-num {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 12px;
+    }
+    .delivery-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--color-text);
+    }
+    .delivery-card p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* --- Use Cases --- */
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .use-case-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 32px;
+      transition: var(--transition);
+    }
+    .use-case-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .use-case-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .use-case-step {
+      margin-bottom: 14px;
+    }
+    .use-case-step:last-child {
+      margin-bottom: 0;
+    }
+    .use-case-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .use-case-label.challenge { color: #dc2626; }
+    .use-case-label.solution { color: #2563eb; }
+    .use-case-label.benefit { color: #16a34a; }
+    .use-case-step p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* --- FAQ --- */
+    .faq-grid {
+      max-width: 800px;
+      margin: 48px auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: left;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      gap: 16px;
+    }
+    .faq-question:hover {
+      color: var(--color-accent);
+    }
+    .faq-question svg {
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+    .faq-answer p {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    /* --- CTA Banner --- */
+    .okta-cta-banner {
+      padding: 100px 0;
+      background: var(--color-primary);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .okta-cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+    .okta-cta-banner .container {
+      position: relative;
+      z-index: 1;
+    }
+    .okta-cta-banner h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .okta-cta-banner p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      max-width: 640px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+      .okta-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .orbit-container {
+        width: 340px;
+        height: 340px;
+      }
+      .orbit-ring-2 {
+        width: 320px;
+        height: 320px;
+      }
+      .orbit-ring-1 {
+        width: 220px;
+        height: 220px;
+      }
+      .partner-grid {
+        grid-template-columns: 1fr;
+      }
+      .partner-visual {
+        position: static;
+      }
+      .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .delivery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .okta-hero {
+        padding: 120px 0 60px;
+      }
+      .okta-section {
+        padding: 64px 0;
+      }
+      .challenges-grid,
+      .use-cases-grid,
+      .pillar-offerings,
+      .challenge-summary {
+        grid-template-columns: 1fr;
+      }
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+      .deploy-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .orbit-container {
+        width: 280px;
+        height: 280px;
+      }
+      .orbit-ring-2 {
+        width: 260px;
+        height: 260px;
+      }
+      .orbit-ring-1 {
+        width: 180px;
+        height: 180px;
+      }
+      .orbit-node .tag-label {
+        display: none;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .pillars-tabs {
+        gap: 6px;
+      }
+      .pillar-tab {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .orbit-container {
+        width: 240px;
+        height: 240px;
+      }
+      .orbit-ring-2 {
+        width: 220px;
+        height: 220px;
+      }
+      .orbit-ring-1 {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="11SI Home">
+        <img src="../images/logo.png" alt="11SI Logo" width="100" height="40">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li class="nav-item has-dropdown" role="none">
+          <a href="/#services" class="nav-link" role="menuitem" aria-haspopup="true">Services</a>
+          <ul class="dropdown" role="menu">
+            <li role="none"><a href="/#services" role="menuitem">Platform Assessment</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Implementation &amp; Deployment</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Managed Services</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Managed Detection &amp; Response</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Data Discovery &amp; Protection</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Threat Surface Management</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown" role="none">
+          <a href="/#partners" class="nav-link" role="menuitem" aria-haspopup="true">Solutions</a>
+          <ul class="dropdown" role="menu">
+            <li role="none"><a href="/solutions/microsoft.html" role="menuitem">Microsoft</a></li>
+            <li role="none"><a href="/solutions/crowdstrike.html" role="menuitem">CrowdStrike</a></li>
+            <li role="none"><a href="/solutions/fortinet.html" role="menuitem">Fortinet</a></li>
+            <li role="none"><a href="/solutions/palo-alto.html" role="menuitem">Palo Alto</a></li>
+            <li role="none"><a href="/solutions/okta.html" role="menuitem">Okta</a></li>
+            <li role="none"><a href="/solutions/cloudflare.html" role="menuitem">Cloudflare</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none"><a href="/#about" class="nav-link" role="menuitem">About Us</a></li>
+        <li class="nav-item" role="none"><a href="/#contact" class="nav-link nav-cta" role="menuitem">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="okta-hero">
+      <div class="container">
+        <div class="okta-hero-grid">
+          <div class="okta-hero-text">
+            <h1 class="okta-hero-title">Every Identity. Every Application. <em>Every Access. Secured.</em></h1>
+            <p class="okta-hero-desc">11SI designs, implements and manages the Okta Identity Security Platform - securing workforce, customer and partner identities with SSO, Adaptive MFA, Identity Governance, Lifecycle Management and Zero Trust across every application, device and environment.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="/#contact">Schedule a Consultation<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:4px"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a href="#platform" class="btn btn-outline-dark">Explore Platform</a>
+            </div>
+            <div class="hero-badges">
+              <span class="hero-badge"><span class="dot"></span>Enterprise risk management specialists</span>
+              <span class="hero-badge"><span class="dot"></span>Certified Okta consultants</span>
+              <span class="hero-badge"><span class="dot"></span>End-to-end professional services</span>
+            </div>
+          </div>
+          <div class="okta-hero-graphic" aria-hidden="true">
+            <div class="orbit-container">
+              <div class="orbit-ring orbit-ring-1"></div>
+              <div class="orbit-ring orbit-ring-2"></div>
+              <div class="orbit-center">
+                <span class="okta-logo-text">okta</span>
+              </div>
+              <!-- Node: User Identity (top) -->
+              <div class="orbit-node" style="transform: translate(calc(200px * cos(-90deg)), calc(200px * sin(-90deg)));" id="orbitNode0">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>User Identity</div>
+              </div>
+              <!-- Node: Authorization -->
+              <div class="orbit-node" id="orbitNode1">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>Authorization</div>
+              </div>
+              <!-- Node: APIs & Workflows -->
+              <div class="orbit-node" id="orbitNode2">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>APIs &amp; Workflows</div>
+              </div>
+              <!-- Node: Authentication -->
+              <div class="orbit-node" id="orbitNode3">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>Authentication</div>
+              </div>
+              <!-- Node: Identity Governance -->
+              <div class="orbit-node" id="orbitNode4">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>Identity Governance</div>
+              </div>
+              <!-- Node: Shared Services -->
+              <div class="orbit-node" id="orbitNode5">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17H5"/><path d="M19 7h-9"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                </div>
+                <div class="tag-label"><span class="tag-dot"></span>Shared Services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERSHIP ============ -->
+    <section class="okta-section okta-section--gray" id="partnership">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">THE PARTNERSHIP</span>
+          <h2 class="section-title">Engineering identity security from strategy to managed operations.</h2>
+          <p class="section-subtitle">11SI turns the Okta Identity Security Platform into a running identity programme - not just a deployed SSO. Strategy, architecture, migration, integration and 24x7 managed identity services, end to end.</p>
+        </div>
+        <div class="partner-grid">
+          <div class="partner-items">
+            <div class="partner-item active">
+              <div class="partner-item-header">
+                <span class="partner-item-num">01</span>
+                <h3>Unified identity across workforce, customers &amp; partners</h3>
+              </div>
+              <p>Okta's cloud-native platform unifies Workforce Identity, Customer Identity, Universal Directory, Lifecycle Management and Identity Governance into a single identity layer - eliminating the siloed IAM tools that create blind spots, access sprawl and compliance gaps. 11SI architects the consolidation strategy, migrates legacy directories, integrates enterprise applications and establishes the governance framework that makes unified identity operationally sustainable.</p>
+            </div>
+            <div class="partner-item">
+              <div class="partner-item-header">
+                <span class="partner-item-num">02</span>
+                <h3>Identity governance &amp; least-privilege enforcement</h3>
+              </div>
+              <p>Okta Identity Governance automates access certifications, Joiner-Mover-Leaver workflows and entitlement management - enforcing least-privilege access continuously rather than through quarterly manual reviews. 11SI deploys the governance framework, integrates HR-triggered provisioning and establishes the compliance reporting that satisfies PCI DSS, ISO 27001, SOX and DPDP audit requirements.</p>
+            </div>
+            <div class="partner-item">
+              <div class="partner-item-header">
+                <span class="partner-item-num">03</span>
+                <h3>Zero Trust identity &amp; adaptive authentication</h3>
+              </div>
+              <p>Okta enables Zero Trust by continuously verifying identity at every access request - not just at login. Adaptive MFA, device trust, Identity Threat Protection and context-aware policies ensure that authentication requirements scale with risk. 11SI designs and operates the Zero Trust identity architecture that makes continuous verification operationally sustainable.</p>
+            </div>
+          </div>
+          <div class="partner-visual">
+            <div class="partner-visual-header">
+              <span class="pv-dot pv-dot--red"></span>
+              <span class="pv-dot pv-dot--yellow"></span>
+              <span class="pv-dot pv-dot--green"></span>
+            </div>
+            <div class="pv-line"><span class="pv-key">OKTA UNIVERSAL DIRECTORY</span> · <span class="pv-val">UNIFIED IDENTITY</span></div>
+            <div class="pv-line">───────────────────────────────</div>
+            <div class="pv-line"><span class="pv-key">Workforce</span> - <span class="pv-num">12,400</span> employees unified</div>
+            <div class="pv-line"><span class="pv-key">Sources</span>  - <span class="pv-str">AD</span> · <span class="pv-str">LDAP</span> · <span class="pv-str">Workday</span> · <span class="pv-str">Azure AD</span></div>
+            <div class="pv-line"><span class="pv-key">Apps</span>    - <span class="pv-num">180+</span> integrated (SSO)</div>
+            <div class="pv-line"><span class="pv-key">MFA</span>     - <span class="pv-str">FastPass</span> · <span class="pv-str">FIDO2</span> · <span class="pv-str">Adaptive</span></div>
+            <div class="pv-line">&nbsp;</div>
+            <div class="pv-line"><span class="pv-key">LIFECYCLE</span></div>
+            <div class="pv-line">  Joiner  → <span class="pv-str">Day-1 access provisioned</span></div>
+            <div class="pv-line">  Mover   → <span class="pv-str">Entitlements updated</span></div>
+            <div class="pv-line">  Leaver  → <span class="pv-str">Deprovisioned in minutes</span></div>
+            <div class="pv-line">&nbsp;</div>
+            <div class="pv-line"><span class="pv-key">GOVERNANCE</span></div>
+            <div class="pv-line">  Certifications  <span class="pv-num">8 weeks → 3 days</span></div>
+            <div class="pv-line">  Audit findings  <span class="pv-str">Eliminated</span></div>
+            <div class="pv-line">  Password resets <span class="pv-num">-94%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLATFORM ============ -->
+    <section class="okta-section okta-section--dark" id="platform">
+      <div class="container">
+        <div class="platform-header-area">
+          <span class="section-label">THE PLATFORM</span>
+          <h2 class="section-title">Okta Identity Security Platform.<br>One identity layer. Every user. Every app.</h2>
+          <p class="section-subtitle">A cloud-native platform unifying Workforce Identity, Customer Identity, Universal Directory, Identity Governance, Lifecycle Management, Privileged Access, Identity Threat Protection and Zero Trust into a single coordinated identity programme.</p>
+        </div>
+        <div class="platform-grid">
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg> User Identity</h4>
+            <div class="platform-card-items">
+              <span>Universal Directory</span>
+              <span>Profile Management</span>
+              <span>Groups</span>
+              <span>Lifecycle Management</span>
+              <span>Delegated Administration</span>
+            </div>
+          </div>
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Authorization</h4>
+            <div class="platform-card-items">
+              <span>Fine-Grained Access</span>
+              <span>Role-Based Access</span>
+              <span>Attribute-Based Access</span>
+              <span>Policy Engine</span>
+              <span>Entitlements</span>
+            </div>
+          </div>
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> APIs &amp; Workflows</h4>
+            <div class="platform-card-items">
+              <span>Okta APIs</span>
+              <span>Event Hooks</span>
+              <span>Workflows</span>
+              <span>Automation</span>
+              <span>Custom Integrations</span>
+            </div>
+          </div>
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg> Authentication</h4>
+            <div class="platform-card-items">
+              <span>Single Sign-On</span>
+              <span>Multi-Factor Authentication</span>
+              <span>Passwordless</span>
+              <span>Adaptive Authentication</span>
+              <span>Risk-Based Policies</span>
+            </div>
+          </div>
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg> Identity Governance</h4>
+            <div class="platform-card-items">
+              <span>Access Requests</span>
+              <span>Approvals &amp; Workflows</span>
+              <span>Access Certifications</span>
+              <span>SoD Policies</span>
+              <span>Audit &amp; Reporting</span>
+            </div>
+          </div>
+          <div class="platform-card">
+            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg> Device Trust</h4>
+            <div class="platform-card-items">
+              <span>Device Assurance</span>
+              <span>Device Context</span>
+              <span>Endpoint Compliance</span>
+              <span>Managed Device Access</span>
+              <span>Conditional Access</span>
+            </div>
+          </div>
+        </div>
+        <div class="deploy-bar">
+          <div class="deploy-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> Public cloud environments</div>
+          <div class="deploy-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg> Enterprise data centers</div>
+          <div class="deploy-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg> Cloud and on-prem infrastructure</div>
+          <div class="deploy-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg> AWS, Azure, GCP and more</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHALLENGES (WHY ZERO TRUST) ============ -->
+    <section class="okta-section" id="why-zero-trust">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">MODERN CHALLENGES</span>
+          <h2 class="section-title">Identity is now the primary<br>attack surface. And the primary perimeter.</h2>
+          <p class="section-subtitle">80%+ of breaches involve compromised credentials. The enterprise perimeter has dissolved - identity is what stands between attackers and your most sensitive systems.</p>
+        </div>
+        <div class="challenges-grid">
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Credential theft &amp; phishing</h3>
+            <p>Adversaries target usernames and passwords because they are still the primary authentication mechanism for most enterprises - social engineering and phishing campaigns now succeed in minutes, not hours.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg> Identity fragmentation</h3>
+            <p>Employees, contractors, partners and customers managed in separate identity systems - AD, LDAP, HR platforms and cloud directories - create inconsistent policies, orphaned accounts and access sprawl that attackers exploit.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg> SaaS sprawl</h3>
+            <p>Hundreds of SaaS applications each with separate credentials, separate MFA and separate access management - no central visibility, no consistent enforcement and a helpdesk drowning in password resets.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg> Privilege abuse</h3>
+            <p>Over-permissioned accounts, standing privileged access and unmonitored admin sessions create pathways that attackers escalate into full enterprise compromise once initial access is obtained through a single credential.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> Multi-cloud identity gaps</h3>
+            <p>Cloud workloads, APIs and services introduce non-human identities - service accounts, tokens and machine credentials - that proliferate outside the governance processes designed for human users.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg> Compliance &amp; audit failures</h3>
+            <p>Access certifications, Joiner-Mover-Leaver controls and entitlement evidence required by PCI DSS, ISO 27001, SOX and DPDP cannot be sustained through manual quarterly processes at enterprise scale.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg> Third-party identity risk</h3>
+            <p>Vendors, contractors and partner organisations access corporate systems with credentials managed outside your governance perimeter - creating exposure that most IAM programmes do not adequately address.</p>
+          </div>
+          <div class="challenge-card">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="14" r="2"/></svg> AI-driven attacks</h3>
+            <p>AI-generated phishing emails, deepfake authentication bypass attempts and automated credential-stuffing attacks accelerate the speed and scale at which identity-based threats are executed against enterprise environments.</p>
+          </div>
+        </div>
+        <div class="challenge-summary">
+          <div class="challenge-summary-card before">Multiple directories. Inconsistent MFA. Manual access reviews. Orphaned accounts.</div>
+          <div class="challenge-summary-card after">Unified identity. Adaptive access. Continuous governance. Zero Trust.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTION AREAS (PILLARS) ============ -->
+    <section class="okta-section okta-section--gray" id="pillars">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">SOLUTION AREAS</span>
+          <h2 class="section-title">The complete Okta portfolio.<br>Every capability, 11SI-delivered.</h2>
+          <p class="section-subtitle">Five integrated solution groups covering every layer of enterprise identity security. Select a tab to explore what 11SI architects, deploys and operates.</p>
+        </div>
+
+        <div class="pillars-tabs">
+          <button class="pillar-tab active" data-tab="access">01 / Access &amp; Authentication</button>
+          <button class="pillar-tab" data-tab="governance">02 / Identity Governance</button>
+          <button class="pillar-tab" data-tab="threat">03 / Threat Protection</button>
+          <button class="pillar-tab" data-tab="ciam">04 / Customer Identity</button>
+          <button class="pillar-tab" data-tab="pam">05 / Privileged Access</button>
+        </div>
+
+        <!-- Tab 1: Access & Authentication -->
+        <div class="pillar-panel active" id="panel-access">
+          <div class="pillar-panel-header">
+            <h3>SSO + Adaptive MFA + Universal Directory - unified access for every user.</h3>
+            <p>Deliver seamless, passwordless and phishing-resistant authentication through Single Sign-On, Adaptive MFA and a centralized Universal Directory that unifies every user identity across the enterprise.</p>
+          </div>
+          <div class="pillar-offerings">
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Single Sign-On (SSO)</h4>
+                <span class="offering-tag">SSO</span>
+              </div>
+              <p>One login to access every application - SAML, OIDC and WS-Federation covering cloud SaaS, on-premises and custom apps. 11SI integrates the full application portfolio with zero-click SSO experiences for end users.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Risk-Based Adaptive Policies</h4>
+                <span class="offering-tag">AMFA</span>
+              </div>
+              <p>Authentication requirements that scale with risk - low risk gets frictionless access, elevated risk triggers step-up MFA, high risk blocks or requires additional verification based on context.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Universal Directory</h4>
+                <span class="offering-tag">UD</span>
+              </div>
+              <p>Central profile store consolidating Active Directory, LDAP, HR systems and external directories - real-time synchronisation with a single governed identity record for every user across the enterprise.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Phishing-Resistant Authentication</h4>
+                <span class="offering-tag">PASSKEY</span>
+              </div>
+              <p>Okta FastPass and FIDO2 WebAuthn delivering phishing-resistant, passwordless authentication - device-bound biometric credentials that cannot be intercepted or replayed, even by sophisticated adversaries.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Directory Integration</h4>
+                <span class="offering-tag">SYNC</span>
+              </div>
+              <p>11SI integrates Okta with Active Directory, Azure AD, SAP SuccessFactors, Workday and custom HR sources - building the identity synchronisation architecture that keeps Universal Directory accurate continuously.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Passwordless Enterprise</h4>
+                <span class="offering-tag">PWDLESS</span>
+              </div>
+              <p>11SI designs and executes passwordless migration programmes - replacing legacy password authentication with biometric, FastPass and hardware token alternatives across the full workforce estate.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Identity Governance -->
+        <div class="pillar-panel" id="panel-governance">
+          <div class="pillar-panel-header">
+            <h3>IGA + Lifecycle Management + Workflows - least privilege, continuously enforced.</h3>
+            <p>Automate identity governance with Joiner-Mover-Leaver workflows, entitlement management, access certifications and compliance-ready reporting.</p>
+          </div>
+          <div class="pillar-offerings">
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>No-Code Identity Automation</h4>
+                <span class="offering-tag">IGA</span>
+              </div>
+              <p>Okta Workflows enabling complex identity processes - onboarding sequences, approval escalations, Slack notifications, ServiceNow ticket creation - without custom code development or ongoing maintenance.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Joiner-Mover-Leaver Automation</h4>
+                <span class="offering-tag">JML</span>
+              </div>
+              <p>HR-triggered provisioning and deprovisioning - new joiners access every required application on Day 1, movers receive updated entitlements immediately, leavers are deprovisioned within minutes of termination.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Access Certifications</h4>
+                <span class="offering-tag">CERT</span>
+              </div>
+              <p>Automated access review campaigns replacing manual spreadsheet processes - manager-driven certifications completed in days with evidence exported directly to compliance reporting tools.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Entitlement Management</h4>
+                <span class="offering-tag">ROLE</span>
+              </div>
+              <p>Role-based access policies with entitlement visibility across every application - identifying and remediating excessive permissions before they become exploitable privilege paths.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Access Request Workflows</h4>
+                <span class="offering-tag">REQ</span>
+              </div>
+              <p>Self-service access requests with configurable approval chains - employees request access through a catalogue, managers approve and Okta provisions automatically without IT helpdesk involvement.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Compliance Reporting</h4>
+                <span class="offering-tag">REPORT</span>
+              </div>
+              <p>Automated evidence generation for PCI DSS, ISO 27001, SOX and DPDP - access logs, certification completion records and provisioning audit trails exported on demand for auditors.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Threat Protection -->
+        <div class="pillar-panel" id="panel-threat">
+          <div class="pillar-panel-header">
+            <h3>Identity Threat Protection + ISPM - continuous verification, active defence.</h3>
+            <p>Continuously assess identity risk, detect account compromise and enforce Zero Trust authentication through adaptive policies and AI-driven identity intelligence.</p>
+          </div>
+          <div class="pillar-offerings">
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Identity Threat Detection</h4>
+                <span class="offering-tag">ITP</span>
+              </div>
+              <p>Real-time detection of account takeover, impossible travel, credential stuffing and suspicious session behaviour - with automated step-up authentication or session termination as the response.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Identity Posture Visibility</h4>
+                <span class="offering-tag">ISPM</span>
+              </div>
+              <p>ISPM continuously assessing the Okta configuration for misconfigurations, weak authentication policies, dormant accounts and identity hygiene issues - surfacing findings with actionable remediation guidance.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>AI-Powered Risk Signals</h4>
+                <span class="offering-tag">AI</span>
+              </div>
+              <p>Okta AI correlating behavioural signals, device telemetry and threat intelligence to produce a per-session risk score - used to dynamically adjust authentication requirements without user friction.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Continuous Verification</h4>
+                <span class="offering-tag">ZT</span>
+              </div>
+              <p>Zero Trust re-evaluation of trust at every access request - not just at login. 11SI configures session re-authentication, inline MFA challenges and dynamic policy adjustments based on behavioural context.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Misconfiguration Detection</h4>
+                <span class="offering-tag">CONFIG</span>
+              </div>
+              <p>11SI uses ISPM to continuously assess the Okta deployment for security regressions - catching policy drift, disabled MFA requirements and authentication policy weaknesses before they create exploitable gaps.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>SIEM &amp; SOC Integration</h4>
+                <span class="offering-tag">SIEM</span>
+              </div>
+              <p>Okta identity events streamed to Microsoft Sentinel, Splunk and other SIEMs - correlating identity signals with network and endpoint telemetry for complete attack chain visibility in the SOC.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Customer Identity -->
+        <div class="pillar-panel" id="panel-ciam">
+          <div class="pillar-panel-header">
+            <h3>CIAM + API Access Management - secure, seamless digital experiences.</h3>
+            <p>Secure digital experiences with Customer Identity, OAuth 2.0, OpenID Connect, social login, API authorization and customer authentication.</p>
+          </div>
+          <div class="pillar-offerings">
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Customer Authentication</h4>
+                <span class="offering-tag">CIAM</span>
+              </div>
+              <p>Secure, branded registration and authentication for customer-facing digital products - social login, passwordless, MFA and progressive profiling delivering frictionless onboarding without compromising security.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>API Security &amp; Token Management</h4>
+                <span class="offering-tag">API</span>
+              </div>
+              <p>OAuth 2.0 and OIDC authorization for APIs and microservices - token issuance, scope enforcement, token introspection and revocation protecting machine-to-machine and user-initiated API flows.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Social Login &amp; Federation</h4>
+                <span class="offering-tag">SOCIAL</span>
+              </div>
+              <p>Google, Apple, Microsoft and enterprise IdP federation - customers authenticate with trusted identities they already own, reducing registration friction and abandonment rates.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Bot &amp; Fraud Protection</h4>
+                <span class="offering-tag">BOT</span>
+              </div>
+              <p>Okta's bot detection and anomaly signals protecting customer registration flows from account creation fraud, credential stuffing and automated attacks on customer-facing authentication endpoints.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Developer Integrations</h4>
+                <span class="offering-tag">SDK</span>
+              </div>
+              <p>11SI integrates Okta CIAM with web apps, mobile apps and backend APIs - embedding authentication SDKs, configuring custom domains and building the developer workflow that makes identity a product feature, not a barrier.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>B2B Identity Delegation</h4>
+                <span class="offering-tag">B2B</span>
+              </div>
+              <p>Partner and enterprise customer organisations managing their own users within your CIAM platform - delegated admin, organisation-level policies and per-tenant MFA requirements without separate deployments.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Privileged Access -->
+        <div class="pillar-panel" id="panel-pam">
+          <div class="pillar-panel-header">
+            <h3>Privileged Access + Device Trust - secure the keys to your kingdom.</h3>
+            <p>Protect privileged accounts with Just-in-Time access, credential vaulting, privileged session monitoring and trusted device enforcement.</p>
+          </div>
+          <div class="pillar-offerings">
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Just-in-Time Privileged Access</h4>
+                <span class="offering-tag">PAM</span>
+              </div>
+              <p>Standing privileged access replaced with time-bound, request-driven access to servers, cloud consoles and sensitive systems - eliminating persistent admin credentials that are a top target for attackers.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Privileged Session Monitoring</h4>
+                <span class="offering-tag">SESSION</span>
+              </div>
+              <p>Full session recording and real-time monitoring for privileged administrative sessions - activity logs satisfying regulatory requirements for administrative access oversight and insider threat detection.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Credential Vaulting</h4>
+                <span class="offering-tag">VAULT</span>
+              </div>
+              <p>Privileged credentials stored, rotated and injected automatically - administrators never see or handle raw passwords for privileged accounts, eliminating credential exposure through phishing or human error.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Device Trust Enforcement</h4>
+                <span class="offering-tag">DEVICE</span>
+              </div>
+              <p>Access conditioned on device registration, MDM compliance posture and certificate validity - unmanaged or non-compliant devices blocked from accessing corporate applications regardless of credential validity.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Passwordless Device Login</h4>
+                <span class="offering-tag">FASTPASS</span>
+              </div>
+              <p>Okta Device Access enabling biometric authentication and FastPass at the operating system login level - extending passwordless to the device itself, not just application authentication.</p>
+            </div>
+            <div class="pillar-offering">
+              <div class="pillar-offering-header">
+                <h4>Administrative Governance</h4>
+                <span class="offering-tag">ADMIN</span>
+              </div>
+              <p>Okta admin role governance - delegated administration with scoped permissions, admin access reviews and privileged account certification integrated into the Identity Governance programme.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ DELIVERY APPROACH ============ -->
+    <section class="okta-section" id="delivery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">DELIVERY APPROACH</span>
+          <h2 class="section-title">A structured, four-stage delivery model.</h2>
+          <p class="section-subtitle">Process-driven and repeatable so outcomes are predictable regardless of scale or complexity.</p>
+        </div>
+        <div class="delivery-grid">
+          <div class="delivery-card">
+            <div class="delivery-num">01</div>
+            <h3>Assess</h3>
+            <p>Architectural design, vulnerability assessment and real-world proof of concepts to identify security gaps and build a scalable Zero Trust foundation before deployment.</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-num">02</div>
+            <h3>Implement</h3>
+            <p>Deploy and integrate certified cybersecurity solutions including Zero Trust, SASE, SIEM, EDR and cloud security platforms, engineered specifically for your environment.</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-num">03</div>
+            <h3>Manage</h3>
+            <p>Provide 24x7 managed services with continuous monitoring, policy optimization, configuration management, platform health checks and compliance reporting.</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-num">04</div>
+            <h3>Defend</h3>
+            <p>Deliver managed detection and response with advanced analytics, threat intelligence and expert SOC operations for rapid threat containment and continuous protection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USE CASES ============ -->
+    <section class="okta-section okta-section--gray" id="use-cases">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">USE CASES</span>
+          <h2 class="section-title">Named identity security challenges.<br>Okta-powered outcomes.</h2>
+          <p class="section-subtitle">Every engagement starts from a specific business problem. Here is how 11SI applies the Okta Identity Security Platform to the identity challenges enterprises face most.</p>
+        </div>
+        <div class="use-cases-grid">
+          <div class="use-case-card">
+            <h3>Workforce Identity Modernization</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Legacy ADFS deployment with separate MFA vendors, inconsistent application access and a helpdesk generating 2,000+ password reset tickets every month.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI migrates to Okta - deploying Single Sign-On across 180+ applications, Okta FastPass passwordless authentication and Universal Directory to consolidate legacy identity stores.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Password reset tickets reduced by 94%, login time decreased from 45 seconds to under 3 seconds and phishing-resistant MFA deployed across the workforce.</p>
+            </div>
+          </div>
+          <div class="use-case-card">
+            <h3>Zero Trust Transformation</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Traditional perimeter-based security implicitly trusts on-network users, allowing compromised credentials or devices unrestricted internal access.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI implements Okta as the Zero Trust policy engine with Adaptive MFA, device trust, context-aware access policies and Identity Threat Protection for continuous verification.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Implicit trust eliminated, lateral movement contained and identity-based attacks detected and responded to within minutes.</p>
+            </div>
+          </div>
+          <div class="use-case-card">
+            <h3>Identity Governance &amp; Compliance</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Quarterly access reviews managed manually in spreadsheets take weeks to complete, creating recurring PCI DSS and ISO 27001 audit findings.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI deploys Okta Identity Governance with automated certification campaigns, entitlement management and real-time access reporting aligned to compliance requirements.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Access certification cycles reduced from 8 weeks to 3 days, audit findings eliminated and compliance evidence generated automatically on demand.</p>
+            </div>
+          </div>
+          <div class="use-case-card">
+            <h3>Automated User Lifecycle</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Employee onboarding takes days while offboarding delays leave dormant accounts active, creating productivity loss and insider risk.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI integrates Okta Lifecycle Management with HR platforms such as Workday to automate Joiner-Mover-Leaver provisioning and deprovisioning.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Day-one productivity enabled for new employees, account removal completed within minutes and orphaned accounts eliminated.</p>
+            </div>
+          </div>
+          <div class="use-case-card">
+            <h3>Privileged Access Modernization</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Shared administrator accounts, standing privileged access and spreadsheet-managed credentials provide no session visibility or access governance.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI deploys Okta Privileged Access with Just-in-Time elevation, session recording, credential vaulting and privileged account governance integrated with Identity Governance.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Standing administrator accounts removed, privileged sessions fully audited and privileged access scope reduced through Just-in-Time controls.</p>
+            </div>
+          </div>
+          <div class="use-case-card">
+            <h3>Customer Identity (CIAM) Launch</h3>
+            <div class="use-case-step">
+              <div class="use-case-label challenge">CHALLENGE</div>
+              <p>Home-grown customer authentication platforms struggle with scalability, lack MFA and social login, and experience high registration abandonment.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label solution">SOLUTION</div>
+              <p>11SI deploys Okta Customer Identity Cloud with branded registration, social login, progressive profiling and passwordless authentication integrated into web and mobile applications.</p>
+            </div>
+            <div class="use-case-step">
+              <div class="use-case-label benefit">BENEFIT</div>
+              <p>Registration abandonment reduced significantly, MFA adoption increased and the platform scaled to hundreds of thousands of users without infrastructure overhead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="okta-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Common questions from security<br>and IT leadership.</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the Okta Identity Security Platform?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>The Okta Identity Security Platform is a cloud-native identity platform that unifies Workforce Identity, Customer Identity (CIAM), Universal Directory, Identity Governance, Lifecycle Management, Privileged Access, Identity Threat Protection and Zero Trust capabilities into a single identity layer. It secures employees, partners, customers, contractors and machine identities across applications, APIs and devices using centralized identity policies.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Workforce Identity?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Workforce Identity is Okta's solution for securing employee, contractor and partner access to enterprise applications. It includes Single Sign-On, Adaptive Multi-Factor Authentication, Universal Directory, Lifecycle Management and Device Trust - providing a single identity layer for every workforce user across cloud and on-premises applications.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Customer Identity (CIAM)?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Customer Identity (CIAM) is Okta's solution for securing customer-facing digital experiences. It provides branded registration, social login, progressive profiling, passwordless authentication, API access management and bot protection - enabling secure, frictionless onboarding for web and mobile applications at scale.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Identity Governance (IGA)?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Identity Governance and Administration (IGA) automates the management of who has access to what. Okta IGA includes access certifications, entitlement management, access request workflows, Separation of Duties policies and compliance reporting - enforcing least-privilege access continuously rather than through manual periodic reviews.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Universal Directory?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Universal Directory is Okta's cloud-based identity store that consolidates users from Active Directory, LDAP, HR systems and external directories into a single, governed profile for every user. It provides real-time synchronisation, profile management and group-based access policies across the enterprise.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is Lifecycle Management?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Lifecycle Management automates the provisioning and deprovisioning of user accounts across all connected applications. HR-triggered Joiner-Mover-Leaver workflows ensure new employees get Day-1 access, role changes update entitlements immediately and leavers are deprovisioned within minutes of termination.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does Okta support Zero Trust?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Okta supports Zero Trust by continuously verifying identity at every access request - not just at login. Adaptive MFA, device trust, context-aware access policies, Identity Threat Protection and risk-based authentication ensure that trust is never implicitly granted and every session is evaluated against real-time risk signals.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does Okta integrate with Microsoft 365 and other enterprise applications?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Okta integrates with over 7,000 applications out of the box, including Microsoft 365, Google Workspace, Salesforce, ServiceNow, Workday, SAP and hundreds of other enterprise SaaS and on-premises applications via SAML, OIDC and WS-Federation protocols.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can 11SI migrate us from legacy IAM platforms?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. 11SI specialises in migration from Microsoft ADFS, SailPoint, Saviynt, ForgeRock, CA Identity Suite and other legacy IAM platforms. Migrations include identity mapping, phased cutover planning and zero-disruption transition strategies to move enterprises onto the Okta platform.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does an Okta implementation take?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Implementation timelines depend on the scope. An SSO quick-start with up to 50 applications takes approximately 10 days. Adaptive MFA rollout takes around 7 days. A full enterprise identity programme covering SSO, MFA, Universal Directory, Lifecycle Management, Identity Governance, Privileged Access and managed services typically takes 40 days for standard-scope environments.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Does 11SI provide managed Okta services?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. 11SI provides 24x7 managed Okta services including platform monitoring, Identity Threat Protection operations, access governance, workflow maintenance, identity reviews and continuous platform optimization under enterprise SLAs. The managed service ensures the Okta platform continues performing well after go-live.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does Okta improve compliance and security?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Okta improves compliance and security through automated access certifications, continuous identity governance, real-time threat detection and audit-ready reporting. It generates evidence for PCI DSS, ISO 27001, SOX and DPDP compliance on demand - replacing manual spreadsheet-based review processes with automated, continuous governance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="okta-cta-banner">
+      <div class="container">
+        <h2>Build your identity-first security strategy with 11SI &amp; Okta.</h2>
+        <p>Talk to 11SI's Okta-certified identity architects about modernizing your IAM programme - from SSO and MFA deployment through Identity Governance, Privileged Access and 24x7 managed identity services.</p>
+        <a href="/#contact" class="btn btn-primary">Schedule a Consultation<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-left:6px"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../images/logo.png" alt="11SI Logo" class="footer-logo" width="120" height="48">
+          <p class="footer-desc">11SI transforms cybersecurity complexity into intelligent, measurable protection — helping organizations assess, implement, and operationalize security with confidence.</p>
+          <div class="footer-contact-list">
+            <a href="mailto:info@11si.com" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg> info@11si.com</a>
+            <a href="tel:+919537384707" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91-9537384707</a>
+            <span class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ahmedabad, India</span>
+          </div>
+          <div class="footer-social"><a href="#" aria-label="LinkedIn" class="social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+        </div>
+        <div class="footer-links-col"><h4>Solutions</h4><ul><li><a href="/solutions/microsoft.html">Microsoft</a></li><li><a href="/solutions/crowdstrike.html">CrowdStrike</a></li><li><a href="/solutions/fortinet.html">Fortinet</a></li><li><a href="/solutions/palo-alto.html">Palo Alto</a></li><li><a href="/solutions/okta.html">Okta</a></li><li><a href="/solutions/cloudflare.html">Cloudflare</a></li></ul></div>
+        <div class="footer-links-col"><h4>Services</h4><ul><li><a href="/#services">Platform Assessment</a></li><li><a href="/#services">Implementation &amp; Deployment</a></li><li><a href="/#services">Managed Services</a></li><li><a href="/#services">Managed Detection &amp; Response</a></li><li><a href="/#services">Data Discovery &amp; Protection</a></li><li><a href="/#services">Threat Surface Management</a></li></ul></div>
+        <div class="footer-links-col"><h4>Company</h4><ul><li><a href="/#about">About 11SI</a></li><li><a href="/#contact">Contact Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 11SI. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a></div></div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('open');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Pillar tabs
+    const pillarTabs = document.querySelectorAll('.pillar-tab');
+    const pillarPanels = document.querySelectorAll('.pillar-panel');
+    pillarTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        pillarTabs.forEach(t => t.classList.remove('active'));
+        pillarPanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const panelId = 'panel-' + tab.dataset.tab;
+        document.getElementById(panelId).classList.add('active');
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+        // Open clicked if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Orbit node positioning
+    function positionOrbitNodes() {
+      const container = document.querySelector('.orbit-container');
+      if (!container) return;
+      const cw = container.offsetWidth;
+      const ch = container.offsetHeight;
+      const cx = cw / 2;
+      const cy = ch / 2;
+      const radius = Math.min(cw, ch) * 0.47;
+      const angles = [-90, -30, 30, 90, 150, -150];
+      const nodes = container.querySelectorAll('.orbit-node');
+      nodes.forEach((node, i) => {
+        const angle = angles[i] * (Math.PI / 180);
+        const x = cx + radius * Math.cos(angle) - 22;
+        const y = cy + radius * Math.sin(angle) - 22;
+        node.style.position = 'absolute';
+        node.style.left = x + 'px';
+        node.style.top = y + 'px';
+        node.style.transform = 'none';
+      });
+    }
+    positionOrbitNodes();
+    window.addEventListener('resize', positionOrbitNodes);
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.partner-item, .platform-card, .challenge-card, .delivery-card, .use-case-card, .pillar-offering, .faq-item');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      revealObserver.observe(el);
+    });
+
+    // Dropdown menus
+    document.querySelectorAll('.has-dropdown').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.querySelector('.dropdown').style.opacity = '1';
+        item.querySelector('.dropdown').style.visibility = 'visible';
+        item.querySelector('.dropdown').style.transform = 'translateY(0)';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.querySelector('.dropdown').style.opacity = '0';
+        item.querySelector('.dropdown').style.visibility = 'hidden';
+        item.querySelector('.dropdown').style.transform = 'translateY(10px)';
+      });
+    });
+  </script>
+
+</body>
+</html>

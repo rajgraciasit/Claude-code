@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="11SI is a Palo Alto Networks partner delivering unified, AI-powered cybersecurity across network, cloud, endpoint, identity and SOC security.">
+  <meta name="keywords" content="Palo Alto Networks, cybersecurity, NGFW, Prisma, Cortex, SASE, XDR, XSIAM, cloud security, 11SI">
+  <meta name="author" content="11SI">
+  <meta name="theme-color" content="#E41F26">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Palo Alto Networks Solutions | 11SI">
+  <meta property="og:description" content="Unified, AI-powered cybersecurity for every user, app and workload. 11SI architects, deploys and operates the Palo Alto Networks platform.">
+  <meta property="og:url" content="https://11si.com/solutions/palo-alto.html">
+  <meta property="og:site_name" content="11SI">
+
+  <title>Palo Alto Networks | AI-Powered Cybersecurity Platform | 11SI</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    /* ============================================
+       Palo Alto Networks — Solution Page Styles
+       ============================================ */
+
+    /* ---------- Hero ---------- */
+    .pa-hero {
+      position: relative;
+      padding: 160px 0 100px;
+      background: var(--color-off-white);
+      overflow: hidden;
+    }
+    .pa-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .pa-hero .container { position: relative; z-index: 1; }
+    .pa-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .pa-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--color-accent);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .pa-hero h1 {
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.12;
+      color: var(--color-text);
+      margin-bottom: 24px;
+    }
+    .pa-hero h1 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+    .pa-hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      margin-bottom: 32px;
+      max-width: 540px;
+    }
+    .pa-hero-ctas {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .pa-hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 100px;
+    }
+    .pa-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--color-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .pa-hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pa-hero-logo {
+      max-width: 400px;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    /* ---------- Section Shared ---------- */
+    .pa-section {
+      padding: 100px 0;
+    }
+    .pa-section--gray {
+      background: var(--color-off-white);
+    }
+    .pa-section--dark {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+    .pa-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 20px;
+    }
+    .pa-section-label::before,
+    .pa-section-label::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--color-accent);
+    }
+    .pa-section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .pa-section-header h2 {
+      font-size: 44px;
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--color-text);
+      margin-bottom: 20px;
+    }
+    .pa-section-header h2 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+    .pa-section--dark .pa-section-header h2 {
+      color: var(--color-white);
+    }
+    .pa-section-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .pa-section--dark .pa-section-header p {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ---------- Partnership ---------- */
+    .pa-partnership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .pa-partnership-main {
+      padding-right: 40px;
+    }
+    .pa-partnership-main h2 {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .pa-partnership-main p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+    .pa-partnership-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .pa-partnership-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 28px;
+      transition: var(--transition);
+    }
+    .pa-partnership-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pa-partnership-card .card-num {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .pa-partnership-card h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .pa-partnership-card p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Platform Visual ---------- */
+    .pa-platform {
+      position: relative;
+      padding: 100px 0;
+      background: var(--color-primary);
+      color: var(--color-white);
+      overflow: hidden;
+    }
+    .pa-platform::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+    .pa-platform .container { position: relative; z-index: 1; }
+    .pa-platform-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .pa-platform-header h2 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--color-white);
+    }
+    .pa-platform-header .pa-platform-tagline {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+    }
+    .pa-platform-header .pa-platform-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* Operate Grid */
+    .pa-operate-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .pa-operate-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .pa-operate-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .pa-operate-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    /* Platform Principles */
+    .pa-principles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .pa-principle-tag {
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* Platform Pillars Grid */
+    .pa-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .pa-pillar-col {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px 16px;
+    }
+    .pa-pillar-col h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .pa-pillar-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pa-pillar-col li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 6px;
+    }
+
+    /* Outcomes */
+    .pa-outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .pa-outcome-card {
+      text-align: center;
+      padding: 24px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+    }
+    .pa-outcome-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+    }
+    .pa-outcome-card p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    /* Deploy */
+    .pa-deploy {
+      text-align: center;
+    }
+    .pa-deploy h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .pa-deploy-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .pa-deploy-tag {
+      padding: 8px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* ---------- Challenges ---------- */
+    .pa-challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .pa-challenge-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: var(--transition);
+    }
+    .pa-challenge-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pa-challenge-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--color-text);
+    }
+    .pa-challenge-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+    .pa-challenges-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .pa-comparison-box {
+      padding: 28px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .pa-comparison-box--old {
+      background: rgba(228, 31, 38, 0.06);
+      border: 1px solid rgba(228, 31, 38, 0.15);
+    }
+    .pa-comparison-box--new {
+      background: rgba(22, 163, 74, 0.06);
+      border: 1px solid rgba(22, 163, 74, 0.15);
+    }
+    .pa-comparison-box h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .pa-comparison-box--old h4 { color: var(--color-accent); }
+    .pa-comparison-box--new h4 { color: #16a34a; }
+    .pa-comparison-box p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ---------- Pillars / Solution Areas ---------- */
+    .pa-pillars-section {
+      padding: 100px 0;
+      background: var(--color-off-white);
+    }
+    .pa-pillar-block {
+      margin-bottom: 48px;
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .pa-pillar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 32px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pa-pillar-header:hover {
+      background: var(--accent-wash);
+    }
+    .pa-pillar-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .pa-pillar-num {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--color-accent);
+      text-transform: uppercase;
+    }
+    .pa-pillar-header h3 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .pa-pillar-header .pa-pillar-desc {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      margin-left: auto;
+      padding-left: 24px;
+    }
+    .pa-pillar-toggle {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--accent-wash);
+      color: var(--color-accent);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .pa-pillar-block.open .pa-pillar-toggle {
+      transform: rotate(180deg);
+    }
+    .pa-pillar-body {
+      display: none;
+      padding: 0 32px 28px;
+      border-top: 1px solid var(--gray-100);
+    }
+    .pa-pillar-block.open .pa-pillar-body {
+      display: block;
+    }
+    .pa-pillar-intro {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+    .pa-offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .pa-offering-card {
+      padding: 20px;
+      background: var(--color-off-white);
+      border-radius: 10px;
+      border: 1px solid var(--gray-100);
+    }
+    .pa-offering-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .pa-offering-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .pa-offering-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--color-accent);
+      background: var(--accent-wash);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .pa-offering-card p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Delivery ---------- */
+    .pa-delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .pa-delivery-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 32px 24px;
+      position: relative;
+      transition: var(--transition);
+    }
+    .pa-delivery-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pa-delivery-card .step-num {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--accent-wash);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .pa-delivery-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--color-text);
+    }
+    .pa-delivery-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Use Cases ---------- */
+    .pa-usecases-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .pa-usecase-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 240px 1fr 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: var(--transition);
+    }
+    .pa-usecase-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pa-usecase-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+      padding-right: 16px;
+      border-right: 1px solid var(--gray-100);
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .pa-usecase-col {
+      padding: 0 8px;
+    }
+    .pa-usecase-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .pa-usecase-col p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+    }
+
+    /* ---------- Industries ---------- */
+    .pa-industries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .pa-industry-card {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .pa-industry-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .pa-industry-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+    .pa-industry-card .industry-users {
+      font-size: 14px;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    .pa-industries-footer {
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ---------- FAQ ---------- */
+    .pa-faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pa-faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .pa-faq-item:hover {
+      border-color: var(--accent-line);
+    }
+    .pa-faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      gap: 16px;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-text);
+      font-family: var(--font-primary);
+    }
+    .pa-faq-question svg {
+      flex-shrink: 0;
+      color: var(--color-accent);
+      transition: var(--transition);
+    }
+    .pa-faq-item.open .pa-faq-question svg {
+      transform: rotate(180deg);
+    }
+    .pa-faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+    .pa-faq-item.open .pa-faq-answer {
+      display: block;
+    }
+
+    /* ---------- CTA Banner ---------- */
+    .pa-cta-banner {
+      padding: 80px 0;
+      background: var(--color-primary);
+      text-align: center;
+    }
+    .pa-cta-banner h2 {
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .pa-cta-banner p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .pa-cta-banner .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-white);
+      background: var(--color-accent);
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .pa-cta-banner .btn:hover {
+      background: var(--color-hover);
+    }
+
+    /* ---------- Buttons ---------- */
+    .pa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: var(--transition);
+      font-family: var(--font-primary);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .pa-btn--primary {
+      background: var(--color-accent);
+      color: var(--color-white);
+    }
+    .pa-btn--primary:hover {
+      background: var(--color-hover);
+    }
+    .pa-btn--secondary {
+      background: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--gray-200);
+    }
+    .pa-btn--secondary:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    /* ---------- Scroll Reveal ---------- */
+    .pa-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .pa-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- Mobile Responsive ---------- */
+    @media (max-width: 1024px) {
+      .pa-hero h1 { font-size: 40px; }
+      .pa-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .pa-hero-visual { order: -1; }
+      .pa-hero-logo { max-width: 280px; }
+      .pa-section-header h2 { font-size: 36px; }
+      .pa-partnership-grid { grid-template-columns: 1fr; }
+      .pa-partnership-main { padding-right: 0; margin-bottom: 20px; }
+      .pa-challenges-grid { grid-template-columns: repeat(2, 1fr); }
+      .pa-pillars-grid { grid-template-columns: repeat(3, 1fr); }
+      .pa-operate-grid { grid-template-columns: repeat(2, 1fr); }
+      .pa-outcomes-grid { grid-template-columns: repeat(3, 1fr); }
+      .pa-delivery-grid { grid-template-columns: repeat(2, 1fr); }
+      .pa-usecase-card { grid-template-columns: 1fr; }
+      .pa-usecase-title { border-right: none; border-bottom: 1px solid var(--gray-100); padding-bottom: 16px; padding-right: 0; min-height: auto; }
+      .pa-industries-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .pa-hero { padding: 130px 0 60px; }
+      .pa-hero h1 { font-size: 32px; }
+      .pa-hero-desc { font-size: 15px; }
+      .pa-hero-ctas { flex-direction: column; }
+      .pa-hero-badges { flex-direction: column; }
+      .pa-section { padding: 70px 0; }
+      .pa-section-header h2 { font-size: 28px; }
+      .pa-partnership-main h2 { font-size: 28px; }
+      .pa-challenges-grid { grid-template-columns: 1fr; }
+      .pa-challenges-comparison { grid-template-columns: 1fr; }
+      .pa-pillars-grid { grid-template-columns: 1fr 1fr; }
+      .pa-operate-grid { grid-template-columns: 1fr; }
+      .pa-outcomes-grid { grid-template-columns: 1fr 1fr; }
+      .pa-delivery-grid { grid-template-columns: 1fr; }
+      .pa-usecase-card { padding: 24px; }
+      .pa-industries-grid { grid-template-columns: 1fr 1fr; }
+      .pa-cta-banner h2 { font-size: 28px; }
+      .pa-pillar-header { flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px 24px; }
+      .pa-pillar-header .pa-pillar-desc { margin-left: 0; padding-left: 0; }
+      .pa-pillar-body { padding: 0 24px 20px; }
+      .pa-offerings-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .pa-hero h1 { font-size: 26px; }
+      .pa-section-header h2 { font-size: 24px; }
+      .pa-partnership-main h2 { font-size: 24px; }
+      .pa-pillars-grid { grid-template-columns: 1fr; }
+      .pa-outcomes-grid { grid-template-columns: 1fr; }
+      .pa-industries-grid { grid-template-columns: 1fr; }
+      .pa-cta-banner h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="11SI Home">
+      <img src="../images/logo.png" alt="11SI Logo" width="100" height="40">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu" role="menubar">
+      <li class="nav-item has-dropdown" role="none">
+        <a href="/#services" class="nav-link" role="menuitem" aria-haspopup="true">Services</a>
+        <ul class="dropdown" role="menu">
+          <li role="none"><a href="/#services" role="menuitem">Platform Assessment</a></li>
+          <li role="none"><a href="/#services" role="menuitem">Implementation &amp; Deployment</a></li>
+          <li role="none"><a href="/#services" role="menuitem">Managed Services</a></li>
+          <li role="none"><a href="/#services" role="menuitem">Managed Detection &amp; Response</a></li>
+          <li role="none"><a href="/#services" role="menuitem">Data Discovery &amp; Protection</a></li>
+          <li role="none"><a href="/#services" role="menuitem">Threat Surface Management</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-dropdown" role="none">
+        <a href="/#partners" class="nav-link" role="menuitem" aria-haspopup="true">Solutions</a>
+        <ul class="dropdown" role="menu">
+          <li role="none"><a href="/solutions/microsoft.html" role="menuitem">Microsoft</a></li>
+          <li role="none"><a href="/solutions/crowdstrike.html" role="menuitem">CrowdStrike</a></li>
+          <li role="none"><a href="/solutions/fortinet.html" role="menuitem">Fortinet</a></li>
+          <li role="none"><a href="/solutions/palo-alto.html" role="menuitem">Palo Alto</a></li>
+          <li role="none"><a href="/solutions/okta.html" role="menuitem">Okta</a></li>
+          <li role="none"><a href="/solutions/cloudflare.html" role="menuitem">Cloudflare</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none"><a href="/#about" class="nav-link" role="menuitem">About Us</a></li>
+      <li class="nav-item" role="none"><a href="/#contact" class="nav-link nav-cta" role="menuitem">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="pa-hero">
+  <div class="container">
+    <div class="pa-hero-grid">
+      <div class="pa-hero-text pa-reveal">
+        <div class="pa-hero-eyebrow">Palo Alto Networks Partner</div>
+        <h1>Unified, AI-powered cybersecurity for <em>every user, app &amp; workload.</em></h1>
+        <p class="pa-hero-desc">11SI architects, deploys and operates the Palo Alto Networks platform - consolidating network, cloud, endpoint, identity and SOC security onto a single AI-driven control plane that reduces cyber risk and accelerates security operations.</p>
+        <div class="pa-hero-ctas">
+          <a href="/#contact" class="pa-btn pa-btn--primary">Schedule a Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#platform" class="pa-btn pa-btn--secondary">Explore Platform</a>
+        </div>
+        <div class="pa-hero-badges">
+          <span class="pa-badge"><span class="pa-badge-dot"></span> One unified security platform</span>
+          <span class="pa-badge"><span class="pa-badge-dot"></span> AI-powered threat prevention</span>
+          <span class="pa-badge"><span class="pa-badge-dot"></span> Accelerated security operations</span>
+        </div>
+      </div>
+      <div class="pa-hero-visual pa-reveal">
+        <img src="../images/paloalto-logo.png" alt="Palo Alto Networks" class="pa-hero-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE PARTNERSHIP ========== -->
+<section class="pa-section" id="partnership">
+  <div class="container">
+    <div class="pa-partnership-grid">
+      <div class="pa-partnership-main pa-reveal">
+        <span class="pa-section-label">The Partnership</span>
+        <h2>Engineering-led delivery of Palo Alto Networks platform.</h2>
+        <p>11SI partners with Palo Alto Networks to help enterprises consolidate fragmented point solutions onto a single, AI-driven cybersecurity platform - engineering the transition, not just reselling the licence.</p>
+      </div>
+      <div class="pa-partnership-cards pa-reveal">
+        <div class="pa-partnership-card">
+          <div class="card-num">01</div>
+          <h3>Platform-first cybersecurity strategy</h3>
+          <p>Palo Alto Networks consolidates network, cloud, endpoint, identity and SOC security onto one integrated platform - replacing stitched-together point products that create visibility gaps, duplicate policies and operational complexity across every layer.</p>
+        </div>
+        <div class="pa-partnership-card">
+          <div class="card-num">02</div>
+          <h3>AI-driven protection, simplified operations</h3>
+          <p>Real-time AI and machine learning underpin every layer of the platform - detecting unknown threats, automating incident response and reducing the manual workload that slows traditional security operations.</p>
+        </div>
+        <div class="pa-partnership-card">
+          <div class="card-num">03</div>
+          <h3>End-to-end consulting &amp; lifecycle services</h3>
+          <p>11SI delivers strategy, architecture, deployment, optimization and 24x7 managed operations as a single accountable partner - covering every stage from first assessment to ongoing defence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PLATFORM ========== -->
+<section class="pa-platform" id="platform">
+  <div class="container">
+    <div class="pa-platform-header pa-reveal">
+      <span class="pa-section-label" style="color: rgba(255,255,255,0.5);">The Platform</span>
+      <h2>PALO ALTO NETWORKS PLATFORM</h2>
+      <p class="pa-platform-tagline">AI-Powered. Cloud Delivered. Future Ready.</p>
+      <p class="pa-platform-sub">One platform. All environments. Maximum security outcomes.</p>
+    </div>
+
+    <!-- Everywhere You Operate -->
+    <div class="pa-operate-grid pa-reveal">
+      <div class="pa-operate-card">
+        <h4>Users</h4>
+        <p>Workforce, Remote, On-prem, Hybrid</p>
+      </div>
+      <div class="pa-operate-card">
+        <h4>Applications</h4>
+        <p>SaaS, Cloud, On-prem, Private Apps</p>
+      </div>
+      <div class="pa-operate-card">
+        <h4>Networks</h4>
+        <p>Data Center, Branch, Campus, OT, IoT</p>
+      </div>
+      <div class="pa-operate-card">
+        <h4>Cloud &amp; Infrastructure</h4>
+        <p>Multi-cloud, Containers, Virtual, Physical</p>
+      </div>
+    </div>
+
+    <!-- Platform Principles -->
+    <div class="pa-principles pa-reveal">
+      <span class="pa-principle-tag">AI-Powered Security</span>
+      <span class="pa-principle-tag">Cloud-Native by Design</span>
+      <span class="pa-principle-tag">Unified Data &amp; Analytics</span>
+      <span class="pa-principle-tag">Automation at Scale</span>
+      <span class="pa-principle-tag">Open &amp; Extensible</span>
+    </div>
+
+    <!-- Platform Pillars -->
+    <div class="pa-pillars-grid pa-reveal">
+      <div class="pa-pillar-col">
+        <h4>Network Security</h4>
+        <ul>
+          <li>NGFW</li>
+          <li>Threat Prevention</li>
+          <li>Advanced WildFire</li>
+          <li>DNS Security</li>
+          <li>URL Filtering</li>
+          <li>SD-WAN</li>
+          <li>IoT Security</li>
+        </ul>
+      </div>
+      <div class="pa-pillar-col">
+        <h4>Prisma</h4>
+        <ul>
+          <li>Prisma SASE</li>
+          <li>Prisma Access</li>
+          <li>Prisma Cloud</li>
+          <li>AI Runtime Security</li>
+          <li>DSPM</li>
+          <li>AI-SPM</li>
+        </ul>
+      </div>
+      <div class="pa-pillar-col">
+        <h4>Cortex</h4>
+        <ul>
+          <li>XSIAM</li>
+          <li>XDR</li>
+          <li>XSOAR</li>
+          <li>Xpanse</li>
+          <li>Cortex Cloud</li>
+        </ul>
+      </div>
+      <div class="pa-pillar-col">
+        <h4>Identity Security</h4>
+        <ul>
+          <li>ZTNA</li>
+          <li>ITDR</li>
+          <li>Identity Context</li>
+        </ul>
+      </div>
+      <div class="pa-pillar-col">
+        <h4>Unit 42</h4>
+        <ul>
+          <li>Incident Response</li>
+          <li>MDR</li>
+          <li>Threat Intelligence</li>
+          <li>Advisory</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Outcomes -->
+    <div class="pa-outcomes-grid pa-reveal">
+      <div class="pa-outcome-card">
+        <h4>Stop More Threats</h4>
+        <p>Prevent known &amp; unknown threats with industry-leading effectiveness.</p>
+      </div>
+      <div class="pa-outcome-card">
+        <h4>Secure Everything</h4>
+        <p>Consistent security across users, applications, networks and clouds.</p>
+      </div>
+      <div class="pa-outcome-card">
+        <h4>Simplify Operations</h4>
+        <p>Unified platform, single console, automated workflows.</p>
+      </div>
+      <div class="pa-outcome-card">
+        <h4>Accelerate Business</h4>
+        <p>Enable secure digital transformation and innovation at scale.</p>
+      </div>
+      <div class="pa-outcome-card">
+        <h4>Maximize ROI</h4>
+        <p>Reduce risk, optimize spend, and improve productivity.</p>
+      </div>
+    </div>
+
+    <!-- Deploy Anywhere -->
+    <div class="pa-deploy pa-reveal">
+      <h4>Deploy Anywhere</h4>
+      <div class="pa-deploy-tags">
+        <span class="pa-deploy-tag">Data Center</span>
+        <span class="pa-deploy-tag">Branch</span>
+        <span class="pa-deploy-tag">Campus</span>
+        <span class="pa-deploy-tag">Cloud</span>
+        <span class="pa-deploy-tag">SaaS</span>
+        <span class="pa-deploy-tag">Remote</span>
+        <span class="pa-deploy-tag">OT / IoT</span>
+        <span class="pa-deploy-tag">AI Applications</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CHALLENGES ========== -->
+<section class="pa-section pa-section--gray" id="challenges">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">Modern Cybersecurity Challenges</span>
+      <h2>The threat landscape has outgrown <em>fragmented point solutions.</em></h2>
+      <p>Hybrid work, multi-cloud adoption and AI-driven attacks have widened the attack surface faster than stitched-together tooling can keep pace - pushing enterprises to consolidate onto integrated platforms instead.</p>
+    </div>
+    <div class="pa-challenges-grid pa-reveal">
+      <div class="pa-challenge-card">
+        <h3>Expanding attack surface</h3>
+        <p>Remote users, branch offices, cloud workloads and third parties have dissolved the perimeter legacy tools were built to defend.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Hybrid workforce</h3>
+        <p>Users connect from anywhere, on any device - inconsistent controls create gaps that follow the user, not the network.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Multi-cloud &amp; SaaS sprawl</h3>
+        <p>Workloads and data span multiple clouds and hundreds of SaaS applications, far outpacing what perimeter-era controls can inspect.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>AI-driven attacks</h3>
+        <p>Adversaries now use AI to accelerate reconnaissance, phishing and exploit development - legacy signature-based defences fall behind.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Identity-based threats</h3>
+        <p>Compromised credentials and over-privileged access remain the fastest path to lateral movement across the enterprise.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Ransomware</h3>
+        <p>Fast-moving ransomware exploits unsegmented networks and slow detection to encrypt and spread before a response can begin.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Security tool sprawl &amp; SOC fatigue</h3>
+        <p>Dozens of disconnected point products generate alert volumes that exhaust analysts and obscure the incidents that matter.</p>
+      </div>
+      <div class="pa-challenge-card">
+        <h3>Rising compliance requirements</h3>
+        <p>Regulatory demands keep expanding, requiring auditable controls and evidence across an increasingly complex estate.</p>
+      </div>
+    </div>
+    <div class="pa-challenges-comparison pa-reveal">
+      <div class="pa-comparison-box pa-comparison-box--old">
+        <h4>Fragmented Point Solutions</h4>
+        <p>Dozens of disconnected tools, siloed visibility</p>
+      </div>
+      <div class="pa-comparison-box pa-comparison-box--new">
+        <h4>Unified Cybersecurity Platform</h4>
+        <p>AI-driven prevention, detection and response, integrated end to end</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOLUTION AREAS / PILLARS ========== -->
+<section class="pa-pillars-section" id="solutions">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">Solution Areas</span>
+      <h2>Five pillars. The full <em>Palo Alto Networks platform.</em></h2>
+      <p>Every capability 11SI designs, deploys and operates - grouped by pillar. Expand each to see what's covered.</p>
+    </div>
+
+    <!-- Pillar 1: Strata -->
+    <div class="pa-pillar-block pa-reveal">
+      <div class="pa-pillar-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="pa-pillar-header-left">
+          <span class="pa-pillar-num">Pillar 01 &middot; Strata</span>
+          <h3>Strata Network Security</h3>
+        </div>
+        <span class="pa-pillar-desc">7 offerings</span>
+        <div class="pa-pillar-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+      </div>
+      <div class="pa-pillar-body">
+        <p class="pa-pillar-intro">AI-powered network security that protects users, campuses, branches, data centres and cloud environments through integrated next-generation firewalls, cloud-delivered security and centralized management.</p>
+        <div class="pa-offerings-grid">
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Next-Generation Firewall</h4><span class="pa-offering-tag">NGFW</span></div>
+            <p>Application-aware firewalling using App-ID, User-ID and Content-ID to stop modern threats without relying on ports or IP addresses.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cloud NGFW</h4><span class="pa-offering-tag">Cloud</span></div>
+            <p>Managed cloud-native firewall security for AWS, Azure and Google Cloud with consistent policy enforcement.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Secure SD-WAN</h4><span class="pa-offering-tag">SD-WAN</span></div>
+            <p>Integrated networking and security for branch offices delivering optimized connectivity with built-in threat prevention.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Advanced Threat Prevention</h4><span class="pa-offering-tag">ATP</span></div>
+            <p>Inline prevention against known, unknown and zero-day exploits using machine learning and real-time threat intelligence.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Advanced DNS Security</h4><span class="pa-offering-tag">DNS</span></div>
+            <p>Prevents DNS tunnelling, command-and-control communication and malicious domain access before threats execute.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Advanced URL Filtering</h4><span class="pa-offering-tag">URL</span></div>
+            <p>AI-powered URL analysis blocks phishing, malicious websites and newly created attack domains in real time.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Panorama Management</h4><span class="pa-offering-tag">MGMT</span></div>
+            <p>Centralized policy management, monitoring and reporting across the entire Strata firewall estate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillar 2: Prisma -->
+    <div class="pa-pillar-block pa-reveal">
+      <div class="pa-pillar-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="pa-pillar-header-left">
+          <span class="pa-pillar-num">Pillar 02 &middot; Prisma</span>
+          <h3>Prisma Cloud</h3>
+        </div>
+        <span class="pa-pillar-desc">9 offerings</span>
+        <div class="pa-pillar-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+      </div>
+      <div class="pa-pillar-body">
+        <p class="pa-pillar-intro">Comprehensive cloud-native application protection platform (CNAPP) securing applications, workloads, identities and data across the complete cloud lifecycle.</p>
+        <div class="pa-offerings-grid">
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cloud Security Posture Management</h4><span class="pa-offering-tag">CSPM</span></div>
+            <p>Continuously discovers cloud misconfigurations and compliance risks across AWS, Azure and Google Cloud.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cloud Workload Protection</h4><span class="pa-offering-tag">CWPP</span></div>
+            <p>Protects virtual machines, containers, Kubernetes and serverless workloads from runtime attacks.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cloud Infrastructure Entitlement Management</h4><span class="pa-offering-tag">CIEM</span></div>
+            <p>Detects excessive permissions and enforces least-privilege identities across cloud environments.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Application Security</h4><span class="pa-offering-tag">APPSEC</span></div>
+            <p>Scans source code, open-source packages, IaC templates and software supply chains during development.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Runtime Security</h4><span class="pa-offering-tag">Runtime</span></div>
+            <p>Continuously monitors workloads for abnormal behaviour, exploits and container escape attempts.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>API Security</h4><span class="pa-offering-tag">API</span></div>
+            <p>Discovers APIs automatically and protects them against abuse, attacks and sensitive data exposure.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Web Application &amp; API Security</h4><span class="pa-offering-tag">WAAS</span></div>
+            <p>Integrated WAF, bot mitigation and API protection for modern cloud-native applications.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Data Security</h4><span class="pa-offering-tag">DSPM</span></div>
+            <p>Discovers sensitive cloud data, identifies exposure risks and enforces governance across storage services.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Prisma Cloud Console</h4><span class="pa-offering-tag">CNAPP</span></div>
+            <p>Unified console providing visibility, posture management, runtime protection and compliance reporting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillar 3: Cortex -->
+    <div class="pa-pillar-block pa-reveal">
+      <div class="pa-pillar-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="pa-pillar-header-left">
+          <span class="pa-pillar-num">Pillar 03 &middot; Cortex</span>
+          <h3>Cortex Security Operations</h3>
+        </div>
+        <span class="pa-pillar-desc">7 offerings</span>
+        <div class="pa-pillar-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+      </div>
+      <div class="pa-pillar-body">
+        <p class="pa-pillar-intro">AI-driven security operations platform that unifies endpoint protection, detection, response, automation and SOC modernization into a single operational experience.</p>
+        <div class="pa-offerings-grid">
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cortex XDR</h4><span class="pa-offering-tag">XDR</span></div>
+            <p>Correlates endpoint, network, cloud and identity telemetry to detect sophisticated attacks with high confidence.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cortex XSIAM</h4><span class="pa-offering-tag">XSIAM</span></div>
+            <p>Autonomous SOC platform combining SIEM, SOAR, XDR and AI-driven incident response.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cortex XSOAR</h4><span class="pa-offering-tag">SOAR</span></div>
+            <p>Automates investigation, orchestration and response workflows across the security ecosystem.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cortex Xpanse</h4><span class="pa-offering-tag">ASM</span></div>
+            <p>Continuously discovers internet-facing assets and identifies external attack surface risks.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cortex Cloud Detection</h4><span class="pa-offering-tag">CDR</span></div>
+            <p>Detects cloud-native threats using behavioural analytics and runtime telemetry.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Incident Response Automation</h4><span class="pa-offering-tag">Auto</span></div>
+            <p>Automates repetitive SOC tasks allowing analysts to focus on high-impact incidents.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Security Operations Dashboard</h4><span class="pa-offering-tag">SOC</span></div>
+            <p>Unified operational dashboard providing visibility across alerts, incidents, assets and investigations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillar 4: Unit 42 -->
+    <div class="pa-pillar-block pa-reveal">
+      <div class="pa-pillar-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="pa-pillar-header-left">
+          <span class="pa-pillar-num">Pillar 04 &middot; Unit 42</span>
+          <h3>Unit 42 Incident Response &amp; Cyber Risk</h3>
+        </div>
+        <span class="pa-pillar-desc">5 offerings</span>
+        <div class="pa-pillar-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+      </div>
+      <div class="pa-pillar-body">
+        <p class="pa-pillar-intro">Palo Alto Networks' elite threat intelligence and incident response organization helping enterprises prepare for, respond to and recover from today's most advanced cyberattacks.</p>
+        <div class="pa-offerings-grid">
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Incident Response</h4><span class="pa-offering-tag">IR</span></div>
+            <p>Rapid containment, forensic investigation and recovery services delivered by Unit 42 responders during active cyber incidents.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Managed Threat Hunting</h4><span class="pa-offering-tag">MTH</span></div>
+            <p>Proactive threat hunting across endpoints, networks and cloud environments to identify hidden adversaries before damage occurs.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cyber Risk Assessment</h4><span class="pa-offering-tag">Risk</span></div>
+            <p>Comprehensive evaluation of security posture, attack surface and business risk with prioritized remediation guidance.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Threat Intelligence</h4><span class="pa-offering-tag">TI</span></div>
+            <p>Access to global threat intelligence, adversary research and Indicators of Compromise (IOCs) to improve detection and prevention.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>Cyber Crisis Advisory</h4><span class="pa-offering-tag">Advisory</span></div>
+            <p>Executive guidance for ransomware, regulatory reporting, business continuity and cyber resilience planning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillar 5: AI Security -->
+    <div class="pa-pillar-block pa-reveal">
+      <div class="pa-pillar-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="pa-pillar-header-left">
+          <span class="pa-pillar-num">Pillar 05 &middot; AI Security</span>
+          <h3>AI Security Platform</h3>
+        </div>
+        <span class="pa-pillar-desc">5 offerings</span>
+        <div class="pa-pillar-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+      </div>
+      <div class="pa-pillar-body">
+        <p class="pa-pillar-intro">Comprehensive security for enterprise AI adoption, protecting AI applications, models, data and users while enabling responsible innovation with governance and visibility.</p>
+        <div class="pa-offerings-grid">
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>AI Runtime Security</h4><span class="pa-offering-tag">Runtime</span></div>
+            <p>Protects AI applications and large language model workloads against prompt injection, jailbreaks and runtime attacks.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>AI Model Protection</h4><span class="pa-offering-tag">Models</span></div>
+            <p>Safeguards proprietary models, APIs and AI infrastructure from misuse, theft and unauthorized access.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>AI Data Security</h4><span class="pa-offering-tag">Data</span></div>
+            <p>Prevents sensitive enterprise information from being exposed through AI prompts, responses and integrated data sources.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>AI Governance</h4><span class="pa-offering-tag">Gov</span></div>
+            <p>Provides visibility, policy enforcement and compliance controls for sanctioned and unsanctioned AI applications across the organization.</p>
+          </div>
+          <div class="pa-offering-card">
+            <div class="pa-offering-card-header"><h4>AI Security Posture</h4><span class="pa-offering-tag">Posture</span></div>
+            <p>Continuously assesses AI deployments for vulnerabilities, misconfigurations and policy violations to maintain a secure AI ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DELIVERY APPROACH ========== -->
+<section class="pa-section" id="delivery">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">Delivery Approach</span>
+      <h2>A structured, four-stage <em>delivery model.</em></h2>
+      <p>Process-driven and repeatable so outcomes are predictable regardless of scale or complexity.</p>
+    </div>
+    <div class="pa-delivery-grid pa-reveal">
+      <div class="pa-delivery-card">
+        <div class="step-num">01</div>
+        <h3>Assess</h3>
+        <p>Architectural design, vulnerability assessment and real-world proof of concepts to identify security gaps and build a scalable Zero Trust foundation before deployment.</p>
+      </div>
+      <div class="pa-delivery-card">
+        <div class="step-num">02</div>
+        <h3>Implement</h3>
+        <p>Deploy and integrate certified cybersecurity solutions including Zero Trust, SASE, SIEM, EDR and cloud security platforms, engineered specifically for your environment.</p>
+      </div>
+      <div class="pa-delivery-card">
+        <div class="step-num">03</div>
+        <h3>Manage</h3>
+        <p>Provide 24x7 managed services with continuous monitoring, policy optimization, configuration management, platform health checks and compliance reporting.</p>
+      </div>
+      <div class="pa-delivery-card">
+        <div class="step-num">04</div>
+        <h3>Defend</h3>
+        <p>Deliver managed detection and response with advanced analytics, threat intelligence and expert SOC operations for rapid threat containment and continuous protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== USE CASES ========== -->
+<section class="pa-section pa-section--gray" id="usecases">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">Use Cases</span>
+      <h2>Solving named problems, <em>not selling a platform.</em></h2>
+      <p>Every engagement starts from a specific business challenge - here's how the Palo Alto Networks platform resolves the ones we see most.</p>
+    </div>
+    <div class="pa-usecases-grid pa-reveal">
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Enterprise Firewall Consolidation</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Multiple firewall vendors created inconsistent policies, limited visibility, operational complexity, and rising maintenance costs across enterprise networks.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>11SI consolidated the environment onto Palo Alto Networks ML-Powered NGFWs with centralized management, Advanced Threat Prevention, WildFire, and URL Filtering.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Unified security policies, complete application visibility, simplified operations, and significantly stronger protection against known and unknown threats.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Hybrid Workforce Transformation</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Legacy VPN and proxy infrastructure struggled to support a rapidly growing remote workforce, causing poor user experience, inconsistent security, and scalability limitations.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Access delivered cloud-native Secure Internet Access, Zero Trust Network Access (ZTNA), and global policy enforcement for remote employees.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Secure, high-performance access from anywhere with consistent security policies and dramatically improved user experience.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Global Secure Internet Access</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Organizations backhauled internet traffic through centralized data centers, increasing latency, operational costs, and network bottlenecks.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Access enabled direct-to-internet connectivity with integrated SWG, DNS Security, Threat Prevention, and cloud-delivered security services.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Lower latency, better application performance, reduced WAN dependency, and consistent security across all locations.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Zero Trust Private Application Access</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Traditional VPNs provided broad network access without validating user identity, device posture, or application-level permissions.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Access implemented Zero Trust Network Access with user-based policies, device compliance validation, and application-level segmentation.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Least-privilege access to private applications while significantly reducing lateral movement and credential-based risks.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Cloud &amp; SaaS Security Modernization</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Cloud-first organizations lacked visibility into SaaS usage, exposing sensitive information to shadow IT and data leakage risks.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Access combined with CASB and Enterprise DLP secured sanctioned and unsanctioned SaaS applications while enforcing consistent security policies.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Improved SaaS governance, reduced data exposure, and continuous visibility across cloud applications.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Manufacturing Network Segmentation</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Flat IT and OT networks limited visibility, increased lateral movement risk, and made critical manufacturing systems difficult to secure.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Palo Alto Networks NGFWs introduced Layer-7 visibility, VLAN segmentation, DNS Security, and centralized policy management across plant environments.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Improved IT-OT segmentation, stronger operational resilience, and enhanced protection for manufacturing infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Cloud-First Secure Access</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Cloud migration exposed the limitations of hardware VPNs, secure web gateways, and proxy appliances that were expensive to maintain and difficult to scale.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>A cloud-native SASE architecture replaced traditional infrastructure with Prisma Access, eliminating hardware dependencies while securing internet and private application access.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Reduced infrastructure complexity, improved scalability, and seamless security aligned with cloud transformation initiatives.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Adaptive User Experience Monitoring</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>IT teams struggled to identify whether application performance issues originated from users, devices, networks, or cloud services.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Access with Autonomous Digital Experience Management (ADEM) provided end-to-end visibility and AI-driven diagnostics across the user journey.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Faster root-cause analysis, proactive issue resolution, and consistently better digital experiences for hybrid users.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">Browser &amp; SaaS Data Protection</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Sensitive enterprise data remained exposed through unmanaged browsers, SaaS applications, and user-driven file sharing.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Prisma Browser, Browser DLP, CASB, and Enterprise DLP enforced granular controls over browser activity, uploads, downloads, clipboard usage, and SaaS access.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Strong protection against data exfiltration without impacting workforce productivity.</p>
+        </div>
+      </div>
+
+      <div class="pa-usecase-card">
+        <div class="pa-usecase-title">AI-Driven Endpoint &amp; Threat Protection</div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Challenge</div>
+          <p>Growing attack sophistication required more than signature-based detection, while distributed endpoints increased operational risk.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Solution</div>
+          <p>Cortex XDR integrated behavioral analytics, endpoint protection, threat detection, and automated response across the enterprise.</p>
+        </div>
+        <div class="pa-usecase-col">
+          <div class="pa-usecase-col-label">Benefit</div>
+          <p>Earlier detection of advanced threats, faster incident response, and significantly improved enterprise cyber resilience.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== INDUSTRIES ========== -->
+<section class="pa-section" id="industries">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">Industries</span>
+      <h2>Delivered across <em>regulated enterprise sectors.</em></h2>
+      <p>Each industry brings a distinct compliance and risk profile - our deployments are tuned accordingly.</p>
+    </div>
+    <div class="pa-industries-grid pa-reveal">
+      <div class="pa-industry-card">
+        <h4>IT / ITES</h4>
+        <span class="industry-users">1,000,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Financial Trading</h4>
+        <span class="industry-users">60,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Technology / Services</h4>
+        <span class="industry-users">80,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Manufacturing</h4>
+        <span class="industry-users">70,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Aviation</h4>
+        <span class="industry-users">30,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Media &amp; Publishing</h4>
+        <span class="industry-users">40,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Social Organization</h4>
+        <span class="industry-users">20,000+ users</span>
+      </div>
+      <div class="pa-industry-card">
+        <h4>Automotive</h4>
+        <span class="industry-users">50,000+ users</span>
+      </div>
+    </div>
+    <p class="pa-industries-footer pa-reveal">Total active Palo Alto Networks platform footprint supported exceeds <strong>1,500,000+ users</strong> across internet security, application security and identity-driven access deployments.</p>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="pa-section pa-section--gray" id="faq">
+  <div class="container">
+    <div class="pa-section-header pa-reveal">
+      <span class="pa-section-label">FAQ</span>
+      <h2>Common questions from <em>security and IT leadership.</em></h2>
+    </div>
+    <div class="pa-faq-list pa-reveal">
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Why choose Palo Alto Networks?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Palo Alto Networks delivers an integrated, AI-powered cybersecurity platform spanning network, cloud, endpoint, identity and security operations - replacing fragmented point products that create visibility gaps, duplicate policy management and operational complexity across the enterprise.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What is the difference between Strata, Prisma and Cortex?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Strata provides network security with next-generation firewalls, SD-WAN and threat prevention. Prisma delivers cloud security and SASE through Prisma Access and Prisma Cloud. Cortex modernizes security operations with XDR, XSOAR and XSIAM for AI-driven detection, investigation and response.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How long does implementation take?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Implementation timelines depend on project scope. A focused firewall, Prisma Access or Cortex deployment can typically be completed within a few weeks, while a full enterprise-wide platform transformation across multiple locations and security domains is delivered as a phased implementation programme.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Can 11SI migrate our existing firewall infrastructure?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Yes. 11SI follows a phased migration methodology that maps existing firewall policies and security controls before cutover, ensuring a seamless transition with minimal disruption, no security gaps and reduced operational risk.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Does 11SI provide managed security services?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Yes. 11SI delivers 24x7 managed security services including platform administration, health monitoring, policy management, incident response, optimization and ongoing operational support under defined service level agreements.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Prisma Cloud improve cloud security?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Prisma Cloud unifies cloud security posture management, workload protection, identity entitlement management and application security into a single CNAPP platform, providing continuous visibility and protection across public, private and hybrid cloud environments.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          How does Cortex improve SOC operations?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Cortex XDR and Cortex XSIAM correlate telemetry from endpoint, network, cloud and identity sources into high-confidence incidents. Built-in automation reduces alert fatigue, accelerates investigations and enables faster response across the security operations centre.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Can 11SI integrate Palo Alto Networks with existing security tools?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Yes. Palo Alto Networks integrates with identity providers, SIEM platforms, ITSM solutions and third-party security technologies through open APIs and Cortex XSOAR integrations, allowing organizations to maximize existing investments while modernizing security operations.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          What professional services does 11SI provide?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">11SI provides complete lifecycle services including security assessments, architecture and design, deployment, migration, implementation, platform optimization, managed security services and ongoing operational support as a single accountable engineering partner.</div>
+      </div>
+
+      <div class="pa-faq-item">
+        <button class="pa-faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Which industries benefit most from Palo Alto Networks solutions?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="pa-faq-answer">Organizations across BFSI, healthcare, manufacturing, government, education, retail, energy and critical infrastructure benefit from Palo Alto Networks. Any enterprise adopting hybrid work, cloud services or AI-driven security gains stronger protection, simplified operations and improved compliance.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BANNER ========== -->
+<section class="pa-cta-banner">
+  <div class="container pa-reveal">
+    <h2>Transform your cybersecurity with 11SI &amp; Palo Alto Networks.</h2>
+    <p>Talk to our certified Palo Alto Networks consultants about consolidating fragmented point solutions onto one AI-powered, cloud-delivered cybersecurity platform - architected and operated end to end.</p>
+    <a href="/#contact" class="btn">Schedule a Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="contact" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="../images/logo.png" alt="11SI Logo" class="footer-logo" width="120" height="48">
+        <p class="footer-desc">11SI transforms cybersecurity complexity into intelligent, measurable protection — helping organizations assess, implement, and operationalize security with confidence.</p>
+        <div class="footer-contact-list">
+          <a href="mailto:info@11si.com" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg> info@11si.com</a>
+          <a href="tel:+919537384707" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91-9537384707</a>
+          <span class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ahmedabad, India</span>
+        </div>
+        <div class="footer-social"><a href="#" aria-label="LinkedIn" class="social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+      </div>
+      <div class="footer-links-col"><h4>Solutions</h4><ul><li><a href="/solutions/microsoft.html">Microsoft</a></li><li><a href="/solutions/crowdstrike.html">CrowdStrike</a></li><li><a href="/solutions/fortinet.html">Fortinet</a></li><li><a href="/solutions/palo-alto.html">Palo Alto</a></li><li><a href="/solutions/okta.html">Okta</a></li><li><a href="/solutions/cloudflare.html">Cloudflare</a></li></ul></div>
+      <div class="footer-links-col"><h4>Services</h4><ul><li><a href="/#services">Platform Assessment</a></li><li><a href="/#services">Implementation &amp; Deployment</a></li><li><a href="/#services">Managed Services</a></li><li><a href="/#services">Managed Detection &amp; Response</a></li><li><a href="/#services">Data Discovery &amp; Protection</a></li><li><a href="/#services">Threat Surface Management</a></li></ul></div>
+      <div class="footer-links-col"><h4>Company</h4><ul><li><a href="/#about">About 11SI</a></li><li><a href="/#contact">Contact Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 11SI. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a></div></div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script>
+(function() {
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  let lastScrollY = 0;
+
+  function handleScroll() {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    lastScrollY = currentScrollY;
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('open');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+  }
+
+  // Mobile dropdown toggle
+  document.querySelectorAll('.has-dropdown > .nav-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      }
+    });
+  });
+
+  // Scroll reveal
+  const revealElements = document.querySelectorAll('.pa-reveal');
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

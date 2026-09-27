@@ -255,8 +255,8 @@
       canvas.style.height = height + 'px';
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       centerX = width / 2;
-      centerY = height / 2;
-      radius = Math.min(width, height) * 0.48;
+      centerY = height / 2 + 30;
+      radius = Math.min(width, height) * 0.40;
     }
 
     function generatePoints() {

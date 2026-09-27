@@ -606,9 +606,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   width: 200px;
   height: 240px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #FDE8E9 0%, #FFF0F0 40%, #FFFFFF 100%);
-  border: 1px solid rgba(228, 31, 38, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(228, 31, 38, 0.06);
+  background: #f0f0ee;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   overflow: hidden;
@@ -651,13 +651,13 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 32px;
-  gap: 20px;
+  padding: 0;
+  gap: 0;
 }
 
 .iso-card-icon {
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -666,6 +666,13 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .iso-card-icon svg {
   width: 100%;
   height: 100%;
+}
+
+.iso-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .iso-card-label {
@@ -856,17 +863,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   overflow: hidden;
 }
 
-.hub-vendor-logo::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(135deg, var(--color-accent) 50%, transparent 50%);
-  opacity: 0.8;
-  border-radius: 0 8px 0 0;
-}
 
 .hub-box:hover {
   border-color: var(--color-accent);

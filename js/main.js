@@ -161,13 +161,11 @@
     });
   });
 
-  // ---- Lifecycle Sticky Scroll ----
+  // ---- Lifecycle Sticky Scroll + 3D Card Stack ----
   var lifecycleScroll = document.querySelector('.lifecycle-scroll');
   if (lifecycleScroll && window.innerWidth > 768) {
-    var dots = document.querySelectorAll('.timeline-dot');
     var panels = document.querySelectorAll('.lifecycle-panel');
-    var visuals = document.querySelectorAll('.lifecycle-visual');
-    var progressBar = document.querySelector('.timeline-progress');
+    var cards = document.querySelectorAll('.iso-card');
     var numPhases = 4;
 
     function updateLifecycle() {
@@ -177,22 +175,12 @@
       var progress = Math.max(0, Math.min(1, scrolled / scrollHeight));
       var activeIndex = Math.min(Math.floor(progress * numPhases), numPhases - 1);
 
-      if (progressBar) {
-        progressBar.style.height = (progress * 100) + '%';
-      }
-
-      dots.forEach(function (dot, i) {
-        dot.classList.remove('active', 'completed');
-        if (i < activeIndex) dot.classList.add('completed');
-        else if (i === activeIndex) dot.classList.add('active');
-      });
-
       panels.forEach(function (panel, i) {
         panel.classList.toggle('active', i === activeIndex);
       });
 
-      visuals.forEach(function (visual, i) {
-        visual.classList.toggle('active', i === activeIndex);
+      cards.forEach(function (card, i) {
+        card.classList.toggle('active', i === activeIndex);
       });
     }
 
@@ -200,26 +188,21 @@
     updateLifecycle();
   }
 
-  // Mobile lifecycle: click dots to switch
+  // Mobile lifecycle: click cards to switch
   if (window.innerWidth <= 768) {
-    var mobileDots = document.querySelectorAll('.timeline-dot');
-    mobileDots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
-        mobileDots.forEach(function (d) { d.classList.remove('active'); });
-        dot.classList.add('active');
+    var mobileCards = document.querySelectorAll('.iso-card');
+    mobileCards.forEach(function (card, i) {
+      card.addEventListener('click', function () {
+        mobileCards.forEach(function (c) { c.classList.remove('active'); });
+        card.classList.add('active');
         var panels = document.querySelectorAll('.lifecycle-panel');
-        var visuals = document.querySelectorAll('.lifecycle-visual');
         panels.forEach(function (p, j) { p.classList.toggle('active', j === i); });
-        visuals.forEach(function (v, j) { v.classList.toggle('active', j === i); });
       });
     });
-    // Activate first
-    var firstDot = document.querySelector('.timeline-dot');
-    if (firstDot) firstDot.classList.add('active');
+    var firstCard = document.querySelector('.iso-card');
+    if (firstCard) firstCard.classList.add('active');
     var firstPanel = document.querySelector('.lifecycle-panel');
     if (firstPanel) firstPanel.classList.add('active');
-    var firstVisual = document.querySelector('.lifecycle-visual');
-    if (firstVisual) firstVisual.classList.add('active');
   }
 
   // ---- Hub Flow SVG Line-Draw Animation ----
@@ -273,7 +256,7 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       centerX = width / 2;
       centerY = height / 2;
-      radius = Math.min(width, height) * 0.32;
+      radius = Math.min(width, height) * 0.48;
     }
 
     function generatePoints() {
@@ -301,11 +284,10 @@
     function drawGlobe() {
       ctx.clearRect(0, 0, width, height);
 
-      // Darker wireframe colors for white background
-      var wireColor = 'rgba(11, 61, 108, 0.12)';
-      var wireColorFaint = 'rgba(11, 61, 108, 0.06)';
-      var dotColor = [11, 61, 108];
-      var connColor = [11, 61, 108];
+      var wireColor = 'rgba(228, 31, 38, 0.10)';
+      var wireColorFaint = 'rgba(228, 31, 38, 0.05)';
+      var dotColor = [228, 31, 38];
+      var connColor = [228, 31, 38];
 
       // Globe outline
       ctx.beginPath();

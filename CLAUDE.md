@@ -62,6 +62,7 @@ Microsoft, CrowdStrike, Fortinet, Sophos, Palo Alto, Okta, Rapid7, Cloudflare
 - **V5**: Replaced SVG vendor logos with actual brand PNG images in marquee & partners
 - **V6** (6ff205c): Fixed Fortinet logo, removed red arrow pseudo-elements from partner boxes, replaced DA card SVG icons with 3D isometric images
 - **V7** (df65bae): Fixed DA card clipping (transparent bg, overflow visible, object-fit contain), converted Palo Alto logo .webp→.png, cropped all vendor logos to remove whitespace for proper rendering at small sizes
+- **V8**: Replaced Cloudflare logo with correct brand logo (orange cloud + CLOUDFLARE text, 1125x469)
 
 ## Vendor Logo Images
 All vendor logos stored as PNG in `images/` folder, cropped to content area (no excessive whitespace):
@@ -70,7 +71,7 @@ All vendor logos stored as PNG in `images/` folder, cropped to content area (no 
 - `sophos-logo.png` (1827x316, blue shield + text)
 - `paloalto-logo.png` (569x128, orange diamond + text)
 - `rapid7-logo.png` (569x120)
-- `cloudflare-logo.png` (1775x754)
+- `cloudflare-logo.png` (1125x469, orange cloud + CLOUDFLARE text)
 
 ## Delivery Architecture Card Images
 3D isometric cards in `images/` folder with transparent/black backgrounds:

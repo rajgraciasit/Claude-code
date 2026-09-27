@@ -591,27 +591,27 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 380px;
+  min-height: 420px;
 }
 
 .card-stack {
   position: relative;
-  width: 280px;
-  height: 340px;
+  width: 340px;
+  height: 400px;
   transform-style: preserve-3d;
 }
 
 .iso-card {
   position: absolute;
-  width: 200px;
-  height: 240px;
-  border-radius: 16px;
-  background: #f0f0ee;
+  width: 240px;
+  height: 280px;
+  border-radius: 0;
+  background: transparent;
   border: none;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .iso-card[data-card="0"] {
@@ -639,9 +639,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .iso-card.active {
-  transform: scale(1.08) translateY(-8px);
-  box-shadow: 0 16px 48px rgba(228, 31, 38, 0.15), 0 4px 16px rgba(0, 0, 0, 0.10);
-  border-color: rgba(228, 31, 38, 0.35);
+  transform: scale(1.12) translateY(-8px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.25));
   z-index: 10 !important;
 }
 
@@ -671,8 +670,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .iso-card-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .iso-card-label {
@@ -1381,11 +1380,11 @@ a.footer-contact-item:hover {
     gap: 32px;
   }
   .card-stack-wrap {
-    min-height: 320px;
+    min-height: 360px;
   }
   .iso-card {
-    width: 170px;
-    height: 200px;
+    width: 200px;
+    height: 240px;
   }
   .marquee-item { font-size: 14px; }
   .marquee-content { gap: 48px; }
@@ -1487,11 +1486,11 @@ a.footer-contact-item:hover {
   }
   .card-stack-wrap {
     order: 1;
-    min-height: 300px;
+    min-height: 320px;
   }
   .iso-card {
-    width: 160px;
-    height: 190px;
+    width: 180px;
+    height: 210px;
   }
 
   .services-grid {

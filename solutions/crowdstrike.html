@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="11SI is a trusted CrowdStrike Falcon Platform delivery partner — deploying, optimizing and operating Falcon across endpoints, identities, cloud, SaaS and security operations.">
+  <meta name="keywords" content="CrowdStrike, Falcon Platform, XDR, SIEM, MDR, endpoint security, identity protection, cloud security, Charlotte AI, 11SI, cybersecurity">
+  <meta name="author" content="11SI">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E41F26">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CrowdStrike Falcon Platform | 11SI">
+  <meta property="og:description" content="11SI deploys, optimizes and operates the CrowdStrike Falcon Platform — AI-native security across endpoints, identities, cloud and SOC.">
+  <meta property="og:url" content="https://11si.com/solutions/crowdstrike.html">
+  <meta property="og:site_name" content="11SI">
+
+  <title>CrowdStrike Falcon Platform | 11SI</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    /* ===== Solution Page Specific Styles ===== */
+
+    /* --- Section Shared --- */
+    .sol-section {
+      padding: 100px 0;
+      position: relative;
+    }
+    .sol-section.sol-alt {
+      background: var(--gray-50);
+    }
+    .sol-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 18px;
+    }
+    .sol-section-label::before,
+    .sol-section-label::after {
+      content: '';
+      width: 24px;
+      height: 1.5px;
+      background: var(--color-accent);
+    }
+    .sol-section-title {
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.18;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+    .sol-section-subtitle {
+      font-size: 17px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      max-width: 680px;
+    }
+    .sol-section-header {
+      margin-bottom: 60px;
+    }
+    .sol-section-header.center {
+      text-align: center;
+    }
+    .sol-section-header.center .sol-section-title,
+    .sol-section-header.center .sol-section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Hero --- */
+    .sol-hero {
+      padding: 140px 0 100px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1A1A2E 0%, #0D0D1A 100%);
+      color: #fff;
+    }
+    .sol-hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .sol-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 20px;
+    }
+    .sol-hero h1 {
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.12;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .sol-hero-desc {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+    .sol-hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .sol-hero-ctas .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .sol-hero-ctas .btn-primary:hover {
+      background: var(--color-hover);
+    }
+    .sol-hero-ctas .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .sol-hero-ctas .btn-outline:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.06);
+    }
+    .sol-hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .sol-hero-badges span {
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.3px;
+    }
+
+    /* Hero Graphic — Orbit */
+    .sol-hero-graphic {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .orbit-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .orbit-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(228,31,38,0.15);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .orbit-ring-1 { width: 70%; height: 70%; }
+    .orbit-ring-2 { width: 100%; height: 100%; }
+    .orbit-center {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 80px; height: 80px;
+      background: var(--color-accent);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 60px rgba(228,31,38,0.35);
+      z-index: 2;
+    }
+    .orbit-center-logo {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    .orbit-center-sub {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
+    .orbit-node {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 3;
+    }
+    .orbit-node-dot {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(228,31,38,0.12);
+      border: 1.5px solid rgba(228,31,38,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .orbit-node-dot svg {
+      width: 18px; height: 18px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 1.5;
+    }
+    .orbit-node-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .orbit-node:nth-child(3) { top: 0%; left: 50%; transform: translateX(-50%); }
+    .orbit-node:nth-child(4) { top: 25%; right: 0%; transform: translateX(0); }
+    .orbit-node:nth-child(5) { bottom: 25%; right: 0%; }
+    .orbit-node:nth-child(6) { bottom: 0%; left: 50%; transform: translateX(-50%); }
+    .orbit-node:nth-child(7) { bottom: 25%; left: 0%; }
+    .orbit-node:nth-child(8) { top: 25%; left: 0%; }
+
+    /* Grid BG overlay for hero */
+    .sol-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 107px 107px;
+      pointer-events: none;
+    }
+
+    /* --- Partnership Section --- */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .accord-item {
+      border-bottom: 1px solid var(--gray-100);
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    .accord-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .accord-num {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-accent);
+      min-width: 28px;
+    }
+    .accord-header h3 {
+      font-size: 18px;
+      font-weight: 500;
+      flex: 1;
+    }
+    .accord-chevron {
+      transition: transform 0.3s;
+    }
+    .accord-item.active .accord-chevron {
+      transform: rotate(180deg);
+    }
+    .accord-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .accord-item.active .accord-body {
+      max-height: 300px;
+      padding-top: 14px;
+    }
+    .accord-body p {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+      padding-left: 44px;
+    }
+
+    /* Engine Panel */
+    .engine-panel {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .engine-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+    .engine-body {
+      padding: 0;
+    }
+    .policy-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--gray-50);
+    }
+    .policy-row:last-child { border-bottom: none; }
+    .policy-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .policy-sub {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      margin-top: 2px;
+    }
+    .policy-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(34,197,94,0.1);
+      color: #16a34a;
+    }
+    .policy-badge.saved {
+      background: rgba(228,31,38,0.08);
+      color: var(--color-accent);
+    }
+    .engine-footer {
+      padding: 14px 24px;
+      border-top: 1px solid var(--gray-100);
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* --- Platform Architecture --- */
+    .cs-arch {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .cs-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cs-module-card {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      padding: 24px;
+      transition: box-shadow 0.3s;
+    }
+    .cs-module-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .cs-mod-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .cs-mod-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cs-mod-icon svg {
+      width: 18px; height: 18px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .cs-mod-num {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+    .cs-mod-header h4 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .cs-module-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .cs-module-card li {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      padding: 3px 0;
+      padding-left: 14px;
+      position: relative;
+    }
+    .cs-module-card li::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      position: absolute;
+      left: 0; top: 10px;
+    }
+    .cs-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+    }
+    .cs-center-circle {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-accent), #C41920);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 60px rgba(228,31,38,0.3);
+    }
+    .cs-center-logo {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    .cs-center-sub {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
+    .powered-section {
+      margin-top: 48px;
+      padding: 32px 0 0;
+      border-top: 1px solid var(--gray-100);
+    }
+    .powered-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 24px;
+    }
+    .powered-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .powered-item h5 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .powered-item p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* --- Challenges Grid --- */
+    .zt-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .zt-card {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      padding: 28px 22px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .zt-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .zt-icon-box {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .zt-icon-box svg {
+      width: 20px; height: 20px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .zt-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .zt-card p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+    }
+    .zt-banner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 32px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      padding: 32px 40px;
+    }
+    .zt-banner-side h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .zt-banner-side p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .zt-banner-arrow {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .zt-banner-arrow svg {
+      width: 22px; height: 22px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* --- Pillar / Solution Area Cards --- */
+    .pillar-card {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .pillar-card:hover {
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      padding: 24px 28px;
+      cursor: pointer;
+      gap: 20px;
+    }
+    .pillar-icon-wrap {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pillar-icon-wrap svg {
+      width: 22px; height: 22px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .pillar-meta {
+      flex: 1;
+    }
+    .pillar-meta .pillar-sub {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 4px;
+    }
+    .pillar-meta h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .pillar-meta p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    .pillar-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .pillar-controls .count-badge {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+    .pillar-chevron {
+      transition: transform 0.3s;
+    }
+    .pillar-card.expanded .pillar-chevron {
+      transform: rotate(180deg);
+    }
+    .pillar-content-wrapper {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .pillar-card.expanded .pillar-content-wrapper {
+      max-height: 2000px;
+    }
+    .pillar-content {
+      padding: 0 28px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .offering-card {
+      background: var(--gray-50);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+    }
+    .offering-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .offering-icon svg {
+      width: 18px; height: 18px;
+      stroke: var(--color-accent);
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .offering-meta h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .offering-meta .offering-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: rgba(228,31,38,0.06);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .offering-meta p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* --- Delivery Timeline --- */
+    .timeline-wrapper {
+      position: relative;
+    }
+    .timeline-line {
+      position: absolute;
+      top: 32px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gray-100);
+      z-index: 0;
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-step {
+      text-align: center;
+    }
+    .halo-ring {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-wash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .step-circle {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .step-1 { background: #7C3AED; }
+    .step-2 { background: #0EA5E9; }
+    .step-3 { background: #F59E0B; }
+    .step-4 { background: var(--color-accent); }
+    .timeline-step h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .timeline-step p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    /* --- Industries --- */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .industry-card {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+    .industry-card:hover {
+      box-shadow: var(--shadow-sm);
+    }
+    .industry-sector {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .industry-users {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1.2;
+    }
+    .industry-users span {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      margin-top: 2px;
+    }
+    .industry-note {
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* --- FAQ --- */
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-card {
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      gap: 16px;
+    }
+    .faq-header h3 {
+      font-size: 16px;
+      font-weight: 600;
+      flex: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-card.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-card.active .faq-body {
+      max-height: 400px;
+    }
+    .faq-answer {
+      padding: 0 24px 20px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+    }
+
+    /* --- CTA Banner --- */
+    .sol-cta-banner {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #1A1A2E 0%, #0D0D1A 100%);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sol-cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 107px 107px;
+      pointer-events: none;
+    }
+    .sol-cta-banner h2 {
+      font-size: 38px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .sol-cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+      max-width: 640px;
+      margin: 0 auto 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .sol-cta-banner .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    .sol-cta-banner .btn-primary:hover {
+      background: var(--color-hover);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+      .sol-hero .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .sol-hero-graphic {
+        max-width: 360px;
+      }
+      .sol-hero h1 { font-size: 40px; }
+      .sol-section-title { font-size: 34px; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .cs-arch { grid-template-columns: 1fr; }
+      .cs-center { padding: 20px 0; }
+      .zt-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline-line { display: none; }
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+      .powered-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .sol-hero { padding: 120px 0 60px; }
+      .sol-hero h1 { font-size: 32px; }
+      .sol-section { padding: 60px 0; }
+      .sol-section-title { font-size: 28px; }
+      .zt-grid { grid-template-columns: 1fr; }
+      .zt-banner { grid-template-columns: 1fr; text-align: center; }
+      .zt-banner-arrow { margin: 0 auto; }
+      .timeline-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pillar-header { flex-wrap: wrap; }
+      .pillar-content { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .sol-cta-banner h2 { font-size: 28px; }
+      .cs-col { gap: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .sol-hero h1 { font-size: 28px; }
+      .sol-hero-ctas { flex-direction: column; }
+      .sol-hero-badges { gap: 6px; }
+      .sol-section-title { font-size: 24px; }
+      .industries-grid { grid-template-columns: 1fr; }
+      .sol-cta-banner h2 { font-size: 24px; }
+    }
+
+    /* Animate on scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/" class="nav-logo" aria-label="11SI Home">
+        <img src="../images/logo.png" alt="11SI Logo" width="100" height="40">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li class="nav-item has-dropdown" role="none">
+          <a href="/#services" class="nav-link" role="menuitem" aria-haspopup="true">Services</a>
+          <ul class="dropdown" role="menu">
+            <li role="none"><a href="/#services" role="menuitem">Platform Assessment</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Implementation &amp; Deployment</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Managed Services</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Managed Detection &amp; Response</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Data Discovery &amp; Protection</a></li>
+            <li role="none"><a href="/#services" role="menuitem">Threat Surface Management</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-dropdown" role="none">
+          <a href="/#partners" class="nav-link" role="menuitem" aria-haspopup="true">Solutions</a>
+          <ul class="dropdown" role="menu">
+            <li role="none"><a href="/solutions/microsoft.html" role="menuitem">Microsoft</a></li>
+            <li role="none"><a href="/solutions/crowdstrike.html" role="menuitem">CrowdStrike</a></li>
+            <li role="none"><a href="/solutions/fortinet.html" role="menuitem">Fortinet</a></li>
+            <li role="none"><a href="/solutions/palo-alto.html" role="menuitem">Palo Alto</a></li>
+            <li role="none"><a href="/solutions/okta.html" role="menuitem">Okta</a></li>
+            <li role="none"><a href="/solutions/cloudflare.html" role="menuitem">Cloudflare</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="none"><a href="/#about" class="nav-link" role="menuitem">About Us</a></li>
+        <li class="nav-item" role="none"><a href="/#contact" class="nav-link nav-cta" role="menuitem">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="sol-hero">
+      <div class="container">
+        <div class="sol-hero-content">
+          <div class="sol-hero-eyebrow">CrowdStrike Falcon Platform Delivery Partner</div>
+          <h1>Stop breaches with the world's most advanced AI-native security platform.</h1>
+          <p class="sol-hero-desc">11SI &mdash; a trusted CrowdStrike partner &mdash; deploys, optimizes and operates the Falcon Platform across endpoints, identities, cloud, SaaS and security operations, helping enterprises stop adversaries before breaches occur.</p>
+          <div class="sol-hero-ctas">
+            <a href="/#contact" class="btn-primary">Book a platform assessment <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#platform" class="btn-outline">Explore Platform <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+          </div>
+          <div class="sol-hero-badges">
+            <span>CrowdStrike Falcon specialists</span>
+            <span>AI-native XDR &amp; SIEM delivery</span>
+            <span>End-to-end Falcon platform expertise</span>
+          </div>
+        </div>
+        <div class="sol-hero-graphic" aria-hidden="true">
+          <div class="orbit-container">
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="orbit-center">
+              <img src="../images/crowdstrike-logo.jpg" alt="CrowdStrike" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
+            </div>
+            <!-- Orbit nodes -->
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
+              <div class="orbit-node-label">Endpoint Security</div>
+            </div>
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div class="orbit-node-label">Identity Protection</div>
+            </div>
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/><path d="M12 6v6l4 2"/></svg></div>
+              <div class="orbit-node-label">Cloud Security</div>
+            </div>
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="orbit-node-label">Exposure Management</div>
+            </div>
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+              <div class="orbit-node-label">Security Operations</div>
+            </div>
+            <div class="orbit-node">
+              <div class="orbit-node-dot"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+              <div class="orbit-node-label">Data &amp; AI Security</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THE PARTNERSHIP ===== -->
+    <section class="sol-section" id="partnership">
+      <div class="container">
+        <div class="sol-section-header fade-up">
+          <div class="sol-section-label">The Partnership</div>
+          <h2 class="sol-section-title">Engineering the Falcon Platform from deployment to breach prevention.</h2>
+          <p class="sol-section-subtitle">11SI turns the Falcon Platform into an operational security programme &mdash; not just a deployed product. Assessment, architecture, implementation and 24&times;7 managed operations, end to end.</p>
+        </div>
+        <div class="partner-grid fade-up">
+          <div class="accord-wrapper">
+            <div class="accord-item active">
+              <div class="accord-header">
+                <span class="accord-num">01</span>
+                <h3>AI-native, single-platform consolidation</h3>
+                <svg class="accord-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="accord-body">
+                <p>The Falcon Platform's single lightweight sensor captures telemetry across endpoints, identities, cloud workloads and SaaS &mdash; feeding a shared intelligence layer that powers AI-driven detection and automated response. 11SI architects the consolidation, retiring fragmented point tools and collapsing siloes into one unified platform with measurably lower operational cost.</p>
+              </div>
+            </div>
+            <div class="accord-item">
+              <div class="accord-header">
+                <span class="accord-num">02</span>
+                <h3>Cross-domain XDR &amp; adversary intelligence</h3>
+                <svg class="accord-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="accord-body">
+                <p>Falcon XDR correlates signals across endpoints, identities, cloud and SaaS into unified incidents &mdash; enriched by CrowdStrike's intelligence on 250+ tracked adversary groups. 11SI configures cross-domain detection rules and integrates adversary intelligence into your SOC workflows for complete attack chain visibility.</p>
+              </div>
+            </div>
+            <div class="accord-item">
+              <div class="accord-header">
+                <span class="accord-num">03</span>
+                <h3>Charlotte AI &amp; agentic SOC transformation</h3>
+                <svg class="accord-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <div class="accord-body">
+                <p>Charlotte AI is CrowdStrike's generative AI analyst that summarises incidents, generates investigation steps and executes agentic playbooks &mdash; reducing mean time to respond by 3&times;. 11SI builds Charlotte AI into SOC workflows with governance boundaries and approval workflows for measurable SOC capability uplift.</p>
+              </div>
+            </div>
+          </div>
+          <div class="engine-panel">
+            <div class="engine-header">Falcon Platform &middot; Consolidated Coverage</div>
+            <div class="engine-body">
+              <div class="policy-row">
+                <div>
+                  <div class="policy-name">Endpoints &mdash; 12,400 sensors active</div>
+                  <div class="policy-sub">Windows &middot; macOS &middot; Linux &middot; mobile</div>
+                </div>
+                <div class="policy-badge">Covered</div>
+              </div>
+              <div class="policy-row">
+                <div>
+                  <div class="policy-name">Identities &mdash; 8,200 accounts monitored</div>
+                  <div class="policy-sub">AD &middot; Entra ID &middot; SaaS identities</div>
+                </div>
+                <div class="policy-badge">Covered</div>
+              </div>
+              <div class="policy-row">
+                <div>
+                  <div class="policy-name">Cloud workloads &mdash; AWS &middot; Azure &middot; GCP</div>
+                  <div class="policy-sub">CNAPP &middot; CSPM &middot; CWPP active</div>
+                </div>
+                <div class="policy-badge">Covered</div>
+              </div>
+              <div class="policy-row">
+                <div>
+                  <div class="policy-name">Legacy tools retired &mdash; 7 point products</div>
+                  <div class="policy-sub">Cost reduced &middot; coverage improved</div>
+                </div>
+                <div class="policy-badge saved">Saved</div>
+              </div>
+            </div>
+            <div class="engine-footer">One sensor &middot; one console &middot; shared intelligence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THE PLATFORM ===== -->
+    <section class="sol-section sol-alt" id="platform">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">The Platform</div>
+          <h2 class="sol-section-title">The CrowdStrike Falcon Platform</h2>
+          <p class="sol-section-subtitle">One intelligent platform securing endpoints, identities, cloud, SaaS, data, AI and the SOC.</p>
+        </div>
+        <div class="cs-arch fade-up">
+          <div class="cs-col">
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
+                <span class="cs-mod-num">01</span>
+                <h4>Endpoint Security</h4>
+              </div>
+              <ul>
+                <li>NGAV</li>
+                <li>EDR / XDR</li>
+                <li>Device Control</li>
+                <li>Firewall Management</li>
+              </ul>
+            </div>
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+                <span class="cs-mod-num">06</span>
+                <h4>Data &amp; AI Security</h4>
+              </div>
+              <ul>
+                <li>Falcon Data Protection</li>
+                <li>SaaS Security</li>
+                <li>AI Security</li>
+                <li>Shadow AI Discovery</li>
+              </ul>
+            </div>
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
+                <span class="cs-mod-num">05</span>
+                <h4>Security Operations</h4>
+              </div>
+              <ul>
+                <li>Falcon Next-Gen SIEM</li>
+                <li>Falcon Fusion SOAR</li>
+                <li>Threat Hunting</li>
+                <li>Investigation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs-center">
+            <div class="cs-center-circle">
+              <span class="cs-center-logo">FALCON</span>
+              <span class="cs-center-sub">PLATFORM</span>
+            </div>
+          </div>
+          <div class="cs-col">
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <span class="cs-mod-num">02</span>
+                <h4>Identity Protection</h4>
+              </div>
+              <ul>
+                <li>ITDR</li>
+                <li>Identity Threat Detection</li>
+                <li>Identity Risk</li>
+              </ul>
+            </div>
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/><path d="M12 6v6l4 2"/></svg></div>
+                <span class="cs-mod-num">03</span>
+                <h4>Cloud Security</h4>
+              </div>
+              <ul>
+                <li>CNAPP</li>
+                <li>CSPM</li>
+                <li>CWP</li>
+                <li>Container Security</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+            <div class="cs-module-card">
+              <div class="cs-mod-header">
+                <div class="cs-mod-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <span class="cs-mod-num">04</span>
+                <h4>Exposure Management</h4>
+              </div>
+              <ul>
+                <li>Discover</li>
+                <li>Spotlight</li>
+                <li>Surface</li>
+                <li>Attack Surface</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="powered-section fade-up">
+          <div class="powered-badge">Powered by AI</div>
+          <div class="powered-grid">
+            <div class="powered-item">
+              <h5>Threat Graph</h5>
+              <p>Real-time correlation of every signal</p>
+            </div>
+            <div class="powered-item">
+              <h5>Charlotte AI</h5>
+              <p>AI analyst that works alongside your team</p>
+            </div>
+            <div class="powered-item">
+              <h5>Falcon Intelligence</h5>
+              <p>CrowdStrike threat intel &amp; adversary tradecraft</p>
+            </div>
+            <div class="powered-item">
+              <h5>Automation</h5>
+              <p>Automate workflows &amp; accelerate response</p>
+            </div>
+            <div class="powered-item">
+              <h5>Machine Learning</h5>
+              <p>Continuously learning. Continuously protecting.</p>
+            </div>
+            <div class="powered-item">
+              <h5>Falcon Fusion</h5>
+              <p>Your security data, connected and unified</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODERN CHALLENGES ===== -->
+    <section class="sol-section">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">Modern Challenges</div>
+          <h2 class="sol-section-title">Adversaries are faster. Fragmented tools can't keep pace.</h2>
+          <p class="sol-section-subtitle">The average eCrime breakout time is 29 minutes. AI-enabled adversaries are attacking 89% faster than last year. Point solutions and manual SOC processes are no longer a viable defence.</p>
+        </div>
+        <div class="zt-grid fade-up">
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <h3>AI-accelerated adversaries</h3>
+            <p>Threat actors weaponize AI to craft convincing phishing, accelerate exploitation and move through environments faster than human-speed detection can respond.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3>Identity-based attacks</h3>
+            <p>Stolen credentials and compromised identities now power the majority of breaches &mdash; perimeter tools never see authentication-based lateral movement.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <h3>Ransomware evolution</h3>
+            <p>Modern ransomware operators move from initial access to encryption in under an hour, using legitimate tools to evade signature-based detection entirely.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <h3>Multi-cloud attack surface</h3>
+            <p>Workloads spread across AWS, Azure and GCP with inconsistent controls create blind spots adversaries actively exploit to move from cloud to endpoint.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <h3>SOC fatigue &amp; alert overload</h3>
+            <p>60% of security teams ignore critical alerts due to bandwidth &mdash; disconnected tools produce noise faster than analysts can investigate signal.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+            <h3>Security tool sprawl</h3>
+            <p>The average enterprise runs 45+ security tools &mdash; creating coverage gaps, integration friction and operational cost that compounds year over year.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Endpoint complexity</h3>
+            <p>Hybrid workforces, BYOD, VDI and legacy systems require consistent endpoint protection across every device type and operating system.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+            <h3>Supply chain compromise</h3>
+            <p>Adversaries target trusted software vendors and third-party tools to deliver malware through legitimate update mechanisms at enterprise scale.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+            <h3>Cross-domain attacks</h3>
+            <p>Modern intrusions span endpoints, identities and cloud in a single attack chain &mdash; invisible to tools that only see one domain at a time.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <h3>Data exfiltration</h3>
+            <p>Sensitive data extraction happens quietly over weeks before ransomware deploys &mdash; undetected by tools that only watch for active execution events.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></div>
+            <h3>Compliance pressure</h3>
+            <p>Regulators demand demonstrable, auditable security controls &mdash; manual evidence collection from fragmented tools cannot sustain continuous compliance posture.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-icon-box"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
+            <h3>Privileged access abuse</h3>
+            <p>Over-permissioned accounts and unmonitored privileged sessions are systematically targeted as the fastest path to business-critical systems.</p>
+          </div>
+        </div>
+        <div class="zt-banner fade-up">
+          <div class="zt-banner-side">
+            <h4>Siloed tools &amp; manual processes</h4>
+            <p>45+ tools. Hours to detect. Analysts overwhelmed.</p>
+          </div>
+          <div class="zt-banner-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="zt-banner-side">
+            <h4>CrowdStrike Falcon Platform</h4>
+            <p>One AI-native platform. 29-min breakout met at machine speed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOLUTION AREAS ===== -->
+    <section class="sol-section sol-alt" id="solutions">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">Solution Areas</div>
+          <h2 class="sol-section-title">The full Falcon Platform. Every module, 11SI-delivered.</h2>
+          <p class="sol-section-subtitle">Seven integrated solution areas &mdash; from next-gen antivirus to agentic SOC. Expand each to see what 11SI implements and operationalizes.</p>
+        </div>
+
+        <!-- 01 Endpoint Security -->
+        <div class="pillar-card expanded fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">01 &middot; Falcon Prevent + Insight</div>
+              <h3>Endpoint Security</h3>
+              <p>AI-native endpoint protection, detection and response across every device &mdash; stopping malware, ransomware and sophisticated living-off-the-land attacks without signatures.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">5 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Falcon Prevent &mdash; Next-Gen AV <span class="offering-tag">NGAV</span></h4>
+                  <p>AI-powered prevention stops malware, ransomware and fileless attacks in real time &mdash; without signatures. 11SI deploys Prevent with prevention policies, sensor configuration and exclusion management tuned to your environment.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Falcon Insight &mdash; EDR <span class="offering-tag">EDR</span></h4>
+                  <p>Continuous endpoint visibility capturing every process, file, network and registry event &mdash; enabling retrospective investigation and real-time detection. 11SI configures detection policies and builds custom IOA rules aligned to your threat model.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Device Control <span class="offering-tag">DC</span></h4>
+                  <p>Precise control over USB, SD card and Thunderbolt devices &mdash; blocking unauthorized removable media while allowing sanctioned devices. 11SI builds device control policies that balance security with business productivity.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Firewall Management <span class="offering-tag">FW</span></h4>
+                  <p>Centralized host firewall management with cloud-delivered policy enforcement across the entire estate. 11SI designs firewall rulesets aligned to your network segmentation and application requirements.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Vulnerability Management <span class="offering-tag">VM</span></h4>
+                  <p>Continuous endpoint vulnerability assessment and IT hygiene &mdash; surfacing unpatched software, misconfigurations and exposure without a separate scanning tool. 11SI integrates findings into your patching and remediation workflows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Identity Security -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">02 &middot; Falcon Next-Gen Identity Security</div>
+              <h3>Identity Security</h3>
+              <p>Stopping identity-based attacks across human, non-human, AI and SaaS identities &mdash; real-time detection of credential abuse, privilege escalation and AD attacks.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">4 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Identity Threat Detection <span class="offering-tag">ITDR</span></h4>
+                  <p>Real-time detection of credential theft, pass-the-hash, pass-the-ticket, kerberoasting and MFA bypass attacks across Active Directory, Entra ID and SaaS identities &mdash; 11SI configures detection rules and MFA policy enforcement.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Privileged Account Protection <span class="offering-tag">PAP</span></h4>
+                  <p>Continuous monitoring of privileged account activity &mdash; detecting anomalous use of admin credentials, service accounts and non-human identities. 11SI designs privileged account governance aligned to least-privilege principles.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>SaaS Identity Security <span class="offering-tag">SaaS-ID</span></h4>
+                  <p>Visibility into SaaS application identities, OAuth grants and non-human service accounts &mdash; detecting over-permissioned integrations and compromised SaaS credentials before they become full breaches.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Lateral Movement Detection <span class="offering-tag">LMD</span></h4>
+                  <p>Catching adversaries moving between systems using legitimate credentials &mdash; detecting the identity-based techniques that traditional EDR misses because no malware is involved in the execution chain.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Cloud Security -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">03 &middot; Falcon Cloud Security</div>
+              <h3>Cloud Security</h3>
+              <p>Unified agent and agentless protection across cloud workloads, containers and AI models &mdash; CNAPP with CSPM, CWPP, KSPM and AI model scanning in a single platform.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">5 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Cloud Security Posture Management <span class="offering-tag">CSPM</span></h4>
+                  <p>Continuous misconfiguration detection and compliance benchmarking across AWS, Azure and GCP &mdash; 11SI deploys CSPM with custom compliance policies and Secure Score improvement programmes.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Cloud Workload Protection <span class="offering-tag">CWPP</span></h4>
+                  <p>Runtime protection for VMs, containers and serverless functions &mdash; Falcon's single sensor extends to cloud workloads without requiring separate cloud-native agents or sacrificing visibility.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Kubernetes &amp; Container Security <span class="offering-tag">KSPM</span></h4>
+                  <p>Cluster posture management, container image scanning and runtime detection for Kubernetes environments &mdash; 11SI integrates Falcon into container build pipelines and configures KSPM policies for your cluster standards.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                <div class="offering-meta">
+                  <h4>AI Model Scanning &amp; Security <span class="offering-tag">AI-SEC</span></h4>
+                  <p>Discovering and scanning AI models in cloud environments for vulnerabilities, supply chain risk and sensitive data exposure &mdash; a new capability that secures AI infrastructure as part of the broader CNAPP deployment.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Infrastructure as Code Security <span class="offering-tag">IaC</span></h4>
+                  <p>Scanning Terraform, CloudFormation and Kubernetes manifests for misconfigurations before deployment &mdash; 11SI integrates IaC scanning into CI/CD pipelines with policy-as-code enforcement and developer ticket routing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 Security Operations & Next-Gen SIEM -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">04 &middot; Falcon Next-Gen SIEM</div>
+              <h3>Security Operations &amp; Next-Gen SIEM</h3>
+              <p>The AI-native engine of the modern SOC &mdash; ingesting Falcon telemetry and third-party data to stop breaches, not just log them.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">4 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Next-Gen SIEM <span class="offering-tag">NG-SIEM</span></h4>
+                  <p>Cloud-native SIEM ingesting Falcon telemetry and third-party data with AI-powered detection, correlation and automated investigation &mdash; 11SI deploys with custom detection rules, dashboards and data connector configuration.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Charlotte AI &mdash; Agentic SOC <span class="offering-tag">AI-SOC</span></h4>
+                  <p>Generative AI embedded across the Falcon Platform &mdash; summarising incidents, generating investigation steps, executing agentic playbooks and reducing MTTR by 3&times;. 11SI builds Charlotte AI into SOC workflows with governance boundaries and approval workflows.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Threat Hunting &mdash; Falcon OverWatch <span class="offering-tag">OW</span></h4>
+                  <p>Elite CrowdStrike threat hunters operating 24&times;7 within the Falcon Platform &mdash; hunting for faint signs of sophisticated intrusion that automated detection alone would miss. 11SI manages the OverWatch integration and hunting programme coordination.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>SOAR &amp; Automated Response <span class="offering-tag">SOAR</span></h4>
+                  <p>Automated investigation, containment and response playbooks built on Falcon Fusion &mdash; 11SI designs the automation scope, playbook library and approval framework that makes agentic response defensible at enterprise scale.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Threat Intelligence & Exposure Management -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">05 &middot; Falcon Intelligence</div>
+              <h3>Threat Intelligence &amp; Exposure Management</h3>
+              <p>Adversary intelligence drawn from tracking 250+ threat groups globally &mdash; enriching every detection with actor context and proactive defence intelligence.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">4 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Adversary Intelligence <span class="offering-tag">INTEL</span></h4>
+                  <p>Real-time intelligence on 250+ tracked adversaries &mdash; their TTPs, campaigns, infrastructure and targeting. 11SI integrates threat intelligence into Falcon detections and builds actor-specific hunting hypotheses for your industry.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Exposure Management <span class="offering-tag">EXPO</span></h4>
+                  <p>Continuous attack surface management identifying external exposures, shadow IT and third-party risk &mdash; 11SI configures Falcon Exposure Management and builds remediation workflows that prioritize by adversary exploitability.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <div class="offering-meta">
+                  <h4>IOC &amp; IOA Enrichment <span class="offering-tag">IOC</span></h4>
+                  <p>Automatic enrichment of every Falcon alert with CrowdStrike's global IOC database and behavioral IOA indicators &mdash; giving analysts immediate context without manual threat intelligence lookup.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2a10 10 0 0110 10z"/><path d="M2 12h20"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Digital Risk Protection <span class="offering-tag">DRP</span></h4>
+                  <p>Monitoring for leaked credentials, brand impersonation and dark web mentions relevant to your organization &mdash; 11SI configures Falcon Intelligence Recon to surface targeted intelligence for your specific threat profile.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 Managed Detection & Response -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">06 &middot; Falcon Complete + 11SI MDR</div>
+              <h3>Managed Detection &amp; Response</h3>
+              <p>24&times;7 expert-led, AI-accelerated MDR backed by CrowdStrike's Breach Prevention Warranty &mdash; 11SI delivers managed Falcon operations as an extension of your security team.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">4 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Falcon Complete MDR <span class="offering-tag">MDR</span></h4>
+                  <p>CrowdStrike's fully managed MDR service &mdash; 24&times;7 expert-led detection, investigation and response with CrowdStrike Breach Prevention Warranty. 11SI manages the Complete deployment, onboarding and ongoing operational governance.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
+                <div class="offering-meta">
+                  <h4>24&times;7 11SI Managed SOC <span class="offering-tag">MSOC</span></h4>
+                  <p>11SI's managed security operations practice provides 24&times;7 Falcon monitoring, alert triage, incident investigation, threat hunting and response &mdash; operating as an embedded extension of your security team under defined SLAs.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Incident Response &amp; Forensics <span class="offering-tag">IR</span></h4>
+                  <p>11SI IR consultants use Falcon's continuous telemetry to reconstruct attack timelines, establish blast radius and produce forensic-quality incident reports &mdash; with breach notification and remediation guidance included.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Platform Optimization <span class="offering-tag">OPT</span></h4>
+                  <p>Ongoing Falcon platform health checks, detection engineering improvements, policy optimization, Secure Score improvements and quarterly business reviews &mdash; 11SI keeps your Falcon deployment performing against an evolving threat landscape.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 AI Security -->
+        <div class="pillar-card fade-up">
+          <div class="pillar-header" onclick="this.parentElement.classList.toggle('expanded')">
+            <div class="pillar-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div class="pillar-meta">
+              <div class="pillar-sub">07 &middot; Secure Your AI</div>
+              <h3>AI Security</h3>
+              <p>Preventing data leaks and securing AI agents, applications, models, identities and infrastructure &mdash; all from the Falcon Platform without adding another tool.</p>
+            </div>
+            <div class="pillar-controls">
+              <span class="count-badge">4 offerings</span>
+              <svg class="pillar-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="pillar-content-wrapper">
+            <div class="pillar-content">
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                <div class="offering-meta">
+                  <h4>Shadow AI Discovery <span class="offering-tag">SHADOW</span></h4>
+                  <p>Detecting unsanctioned AI tool usage, AI agents and AI API integrations across the enterprise before they create data governance or security risk &mdash; 11SI configures AI visibility policies aligned to your acceptable use framework.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="offering-meta">
+                  <h4>AI Agent &amp; App Protection <span class="offering-tag">AAP</span></h4>
+                  <p>Real-time protection for AI agents and applications running in cloud and endpoint environments &mdash; detecting prompt injection, model abuse and AI-specific attack patterns through the Falcon sensor.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <div class="offering-meta">
+                  <h4>AI Data Governance <span class="offering-tag">ADG</span></h4>
+                  <p>Controlling what sensitive data flows into AI systems &mdash; preventing PII, regulated data and proprietary information from being ingested by AI applications without appropriate governance and logging.</p>
+                </div>
+              </div>
+              <div class="offering-card">
+                <div class="offering-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                <div class="offering-meta">
+                  <h4>AI Model &amp; Infrastructure Scanning <span class="offering-tag">AMS</span></h4>
+                  <p>Scanning AI models and infrastructure for vulnerabilities, supply chain risk and exposure &mdash; 11SI integrates Falcon AI model scanning into your AI development pipeline and cloud security programme.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DELIVERY APPROACH ===== -->
+    <section class="sol-section" id="delivery">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">Delivery Approach</div>
+          <h2 class="sol-section-title">A structured, four-stage delivery model.</h2>
+          <p class="sol-section-subtitle">Process-driven and repeatable so outcomes are predictable regardless of scale or complexity.</p>
+        </div>
+        <div class="timeline-wrapper fade-up">
+          <div class="timeline-line"></div>
+          <div class="timeline-grid">
+            <div class="timeline-step">
+              <div class="halo-ring"><div class="step-circle step-1">01</div></div>
+              <h3>Assess</h3>
+              <p>Architectural design, vulnerability assessment and real-world proof of concepts to identify security gaps and build a scalable Zero Trust foundation before deployment.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="halo-ring"><div class="step-circle step-2">02</div></div>
+              <h3>Implement</h3>
+              <p>Deploy and integrate certified cybersecurity solutions including Zero Trust, SASE, SIEM, EDR and cloud security platforms, engineered specifically for your environment.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="halo-ring"><div class="step-circle step-3">03</div></div>
+              <h3>Manage</h3>
+              <p>Provide 24&times;7 managed services with continuous monitoring, policy optimization, configuration management, platform health checks and compliance reporting.</p>
+            </div>
+            <div class="timeline-step">
+              <div class="halo-ring"><div class="step-circle step-4">04</div></div>
+              <h3>Defend</h3>
+              <p>Deliver managed detection and response with advanced analytics, threat intelligence and expert SOC operations for rapid threat containment and continuous protection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INDUSTRIES ===== -->
+    <section class="sol-section sol-alt" id="industries">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">Industries</div>
+          <h2 class="sol-section-title">Delivered across regulated enterprise sectors.</h2>
+          <p class="sol-section-subtitle">Each industry brings a distinct compliance and risk profile &mdash; our deployments are tuned accordingly.</p>
+        </div>
+        <div class="industries-grid fade-up">
+          <div class="industry-card">
+            <div class="industry-sector">IT/ITES</div>
+            <div class="industry-users">125,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">BFSI</div>
+            <div class="industry-users">400,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Ecommerce</div>
+            <div class="industry-users">6,500+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Manufacturing</div>
+            <div class="industry-users">250,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Entertainment</div>
+            <div class="industry-users">20,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Government</div>
+            <div class="industry-users">10,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Healthcare</div>
+            <div class="industry-users">115,000+ <span>users</span></div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-sector">Finance</div>
+            <div class="industry-users">11,000+ <span>users</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="sol-section" id="faq">
+      <div class="container">
+        <div class="sol-section-header center fade-up">
+          <div class="sol-section-label">FAQ</div>
+          <h2 class="sol-section-title">Common questions from security and IT leadership.</h2>
+        </div>
+        <div class="faq-wrapper fade-up">
+          <div class="faq-card active">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>What is the CrowdStrike Falcon Platform?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">The CrowdStrike Falcon Platform is an AI-native cybersecurity platform that protects endpoints, identities, cloud workloads, SaaS applications and security operations from a single lightweight sensor and unified console. Its shared intelligence layer &mdash; enriched by tracking 250+ adversary groups globally &mdash; powers Charlotte AI's agentic detection, investigation and automated response capabilities across every security domain.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>What is Charlotte AI and how does it improve SOC operations?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Charlotte AI is CrowdStrike's generative AI security assistant embedded across the Falcon Platform. It summarises incidents, generates investigation steps, executes agentic playbooks and produces natural language answers to complex security queries &mdash; reducing mean time to respond by 3&times; and allowing analysts to handle significantly more incidents per shift without adding headcount.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>How does Falcon XDR differ from traditional EDR?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Traditional EDR sees only endpoint telemetry. Falcon XDR correlates signals from endpoints, identities, cloud workloads and SaaS applications into unified incidents &mdash; so a cross-domain attack that starts with credential theft, pivots through an endpoint and exfiltrates from cloud storage appears as one complete attack chain with full context, rather than three separate disconnected alerts in different consoles.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>Can 11SI migrate us from our existing endpoint or SIEM platform?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Yes. 11SI runs structured migration programmes from legacy EPP/EDR solutions to Falcon Endpoint Security and from legacy SIEM platforms to Falcon Next-Gen SIEM. We run both platforms in parallel during transition, map existing detection rules to Falcon equivalents and validate coverage before cutover &mdash; eliminating detection blind spots during migration.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>What is Falcon Complete MDR?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Falcon Complete is CrowdStrike's fully managed MDR service &mdash; 24&times;7 expert-led detection, investigation and response, backed by the CrowdStrike Breach Prevention Warranty. If a breach occurs on a covered endpoint, CrowdStrike provides remediation support. 11SI manages the Complete deployment, onboarding, policy governance and operational coordination as your implementation and managed services partner.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>How does Falcon stop ransomware?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Falcon Prevent's AI behavioral engine stops ransomware at the execution stage &mdash; before encryption begins &mdash; without relying on signatures. It detects the behavioral patterns ransomware uses (process injection, shadow copy deletion, lateral movement preparation) regardless of whether the specific ransomware variant has been seen before. 11SI deploys prevention policies with attack surface reduction rules that close the lateral movement paths ransomware uses to spread.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>Does CrowdStrike support cloud and Kubernetes environments?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Yes. Falcon Cloud Security covers AWS, Azure and GCP with CSPM, CWPP and KSPM &mdash; protecting VMs, containers, Kubernetes clusters and serverless functions. The same Falcon sensor that protects endpoints extends to cloud workloads, meaning cloud detections and endpoint detections share context in the same console and feed the same Charlotte AI investigation workflow.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>How does Falcon Next-Gen SIEM differ from traditional SIEM?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Traditional SIEM requires months of tuning to produce useful detections and scales expensively as data volume grows. Falcon Next-Gen SIEM ingests Falcon's high-fidelity telemetry and third-party data, applying AI-powered detection that delivers results on day one. Charlotte AI then investigates alerts automatically &mdash; so analysts spend time on response decisions rather than manual triage of low-fidelity noise.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>Does 11SI provide 24&times;7 managed services for Falcon?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Yes. 11SI's managed security practice provides 24&times;7 Falcon monitoring, alert triage, threat hunting, incident investigation and response under defined SLAs &mdash; operating as an extension of your security team. We also manage platform health checks, detection engineering improvements, policy optimization and quarterly security reviews so the platform continuously improves against the current threat landscape.</p>
+            </div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3>What industries and compliance frameworks does Falcon support?</h3>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-body">
+              <p class="faq-answer">Falcon is deployed across BFSI, healthcare, manufacturing, government, retail and critical infrastructure sectors globally. 11SI maps Falcon controls to DPDP, RBI, SEBI, ISO 27001, PCI DSS, HIPAA and NIST CSF &mdash; building compliance dashboards from Falcon telemetry and configuring automated evidence exports that support audit cycles without manual data collection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="sol-cta-banner">
+      <div class="container">
+        <h2>Stop breaches with 11SI &amp; the Falcon Platform.</h2>
+        <p>Talk to 11SI's Falcon-certified specialists about deploying CrowdStrike across your endpoints, identities, cloud and security operations &mdash; from first sensor to a 24&times;7-operated, AI-powered security programme that stops the most sophisticated adversaries.</p>
+        <a href="/#contact" class="btn-primary">Schedule a Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="../images/logo.png" alt="11SI Logo" class="footer-logo" width="120" height="48">
+          <p class="footer-desc">11SI transforms cybersecurity complexity into intelligent, measurable protection — helping organizations assess, implement, and operationalize security with confidence.</p>
+          <div class="footer-contact-list">
+            <a href="mailto:info@11si.com" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg> info@11si.com</a>
+            <a href="tel:+919537384707" class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +91-9537384707</a>
+            <span class="footer-contact-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ahmedabad, India</span>
+          </div>
+          <div class="footer-social"><a href="#" aria-label="LinkedIn" class="social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+        </div>
+        <div class="footer-links-col"><h4>Solutions</h4><ul><li><a href="/solutions/microsoft.html">Microsoft</a></li><li><a href="/solutions/crowdstrike.html">CrowdStrike</a></li><li><a href="/solutions/fortinet.html">Fortinet</a></li><li><a href="/solutions/palo-alto.html">Palo Alto</a></li><li><a href="/solutions/okta.html">Okta</a></li><li><a href="/solutions/cloudflare.html">Cloudflare</a></li></ul></div>
+        <div class="footer-links-col"><h4>Services</h4><ul><li><a href="/#services">Platform Assessment</a></li><li><a href="/#services">Implementation &amp; Deployment</a></li><li><a href="/#services">Managed Services</a></li><li><a href="/#services">Managed Detection &amp; Response</a></li><li><a href="/#services">Data Discovery &amp; Protection</a></li><li><a href="/#services">Threat Surface Management</a></li></ul></div>
+        <div class="footer-links-col"><h4>Company</h4><ul><li><a href="/#about">About 11SI</a></li><li><a href="/#contact">Contact Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 11SI. All Rights Reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a></div></div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', navToggle.classList.contains('active'));
+    });
+
+    // FAQ toggle
+    function toggleFaq(header) {
+      const card = header.parentElement;
+      card.classList.toggle('active');
+    }
+
+    // Accordion toggle
+    document.querySelectorAll('.accord-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const wasActive = item.classList.contains('active');
+        // Close all siblings
+        item.parentElement.querySelectorAll('.accord-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

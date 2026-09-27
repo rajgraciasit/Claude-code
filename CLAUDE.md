@@ -27,8 +27,8 @@ Microsoft, CrowdStrike, Fortinet, Sophos, Palo Alto, Okta, Rapid7, Cloudflare
 
 ### Key Features
 - Canvas-based rotating wireframe globe animation (red-tinted, larger radius 0.48)
-- CSS infinite marquee with SVG vendor logos (slow 50s animation)
-- 3D isometric card stack for Delivery Architecture section (4 stacked cards with icons: magnifying glass, gears, gear+wrench, shield) — scroll-driven transitions
+- CSS infinite marquee with actual brand logo PNG images (greyscale filter, 50s animation)
+- 3D isometric card stack for Delivery Architecture section (4 stacked 3D cards: purple Assess, teal Implement, gold Manage, red Defend) — scroll-driven transitions with transparent backgrounds and drop-shadow
 - Services grid (6 cards)
 - SVG bezier curve hub flow diagram with stroke-dasharray/dashoffset animation for Technology Partners
 - Radware live threat map iframe with CSS overlays hiding internal UI
@@ -59,6 +59,25 @@ Microsoft, CrowdStrike, Fortinet, Sophos, Palo Alto, Okta, Rapid7, Cloudflare
 - **V2** (e0239a5): White hero, sticky scroll lifecycle, hub flow diagram, Radware threat map, Satoshi font, vendor marquee, hub animation fix
 - **V3** (d163918): Style updates matching ACPL design patterns — floating nav, grid bg, section labels, medium weights, squared buttons, gradient stats, white footer
 - **V4**: ACPL red color scheme, SVG vendor logos in marquee & partners, 3D isometric card stack for lifecycle, larger globe, 2-row partner grid
+- **V5**: Replaced SVG vendor logos with actual brand PNG images in marquee & partners
+- **V6** (6ff205c): Fixed Fortinet logo, removed red arrow pseudo-elements from partner boxes, replaced DA card SVG icons with 3D isometric images
+- **V7** (df65bae): Fixed DA card clipping (transparent bg, overflow visible, object-fit contain), converted Palo Alto logo .webp→.png, cropped all vendor logos to remove whitespace for proper rendering at small sizes
+
+## Vendor Logo Images
+All vendor logos stored as PNG in `images/` folder, cropped to content area (no excessive whitespace):
+- `crowdstrike-logo.jpg` (2000x1125)
+- `fortinet-logo.png` (450x78, red grid + FORTINET text)
+- `sophos-logo.png` (1827x316, blue shield + text)
+- `paloalto-logo.png` (569x128, orange diamond + text)
+- `rapid7-logo.png` (569x120)
+- `cloudflare-logo.png` (1775x754)
+
+## Delivery Architecture Card Images
+3D isometric cards in `images/` folder with transparent/black backgrounds:
+- `da-assess.png` — Purple card with fingerprint/key (01)
+- `da-implement.png` — Teal card with hexagons/servers (02)
+- `da-manage.png` — Gold card with gears/globes (03)
+- `da-defend.png` — Red card with shield/sword (04)
 
 ## Pending Work
 - Build inner pages (Services, Solutions, About Us, Contact Us)
